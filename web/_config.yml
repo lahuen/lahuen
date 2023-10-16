@@ -9,7 +9,7 @@ google_maps_javascript_api_key:
 disqus_shortname:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
+logo: /apple-touch-icon.png
 description: Plant breeding of medicinal Cannabis genotypes and Data Analytics.
 author:
   name:
@@ -82,7 +82,7 @@ exclude:
   - LICENCE
 
 # -----------
-# CloudCannon
+# Template author
 
 _select_data:
   social_icons:
