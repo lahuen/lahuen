@@ -16,9 +16,9 @@
   highlight: false
 - name: Login
   link: /
-  new_window: true
+  new_window: false
   highlight: false
 - name: Sign Up
   link: /
-  new_window: true
+  new_window: false
   highlight: true
