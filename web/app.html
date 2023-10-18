@@ -3,10 +3,10 @@ title: App
 heading: Download our app today!
 description: From the App Store or Google Play Store.
 icons:
-  - image: "{{ site.baseurl }}/images/google-play-icon.png"
+  - image: google-play-icon.png
     alt: Google Play Store
     link: https://play.google.com/store/apps/details?id=com.example.myapp
-  - image: "{{ site.baseurl }}/images/apple-app-store-icon.png"
+  - image: apple-app-store-icon.png
     alt: Apple App Store
     link: https://apps.apple.com/app/id1234567890
 faq:
@@ -24,7 +24,7 @@ faq:
     {% for icon in page.icons %}
       <li>
         <a href="{{ icon.link }}">
-          <img src="{{ icon.image }}" alt="{{ icon.alt }}">
+          <img src="{{ site.baseurl }}/images/{{ icon.image }}" alt="{{ icon.alt }}">
         </a>
       </li>
     {% endfor %}
