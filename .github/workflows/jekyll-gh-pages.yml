@@ -42,5 +42,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        with:
-          google_maps_api_key: ${{ secrets.GOOGLE_MAPS_API_KEY }}
