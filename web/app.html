@@ -1,0 +1,44 @@
+---
+title: App
+heading: Download our app today!
+description: From the App Store or Google Play Store.
+icons:
+  - image: google-play-icon.png
+    alt: Google Play Store icon
+    link: https://play.google.com/store/apps/details?id=com.example.myapp
+  - image: apple-app-store-icon.png
+    alt: Apple App Store icon
+    link: https://apps.apple.com/app/id1234567890
+faq:
+  - question: What payment methods do you accept?
+    answer: Credit cards including MasterCard, Visa or American Express.
+  - question: Do you offer pricing for nonprofit organizations?
+    answer: Yes, send us a message and we'll set you up on our nonprofit pricing.
+  - question: Questions?
+    answer: Contact us for any further questions at <a href="#">cbd.preparados@gmail.com</a>.
+---
+
+<div class="pricing">
+  <h2>Download our app</h2>
+  <ul class="icons">
+    {% for icon in page.icons %}
+      <li>
+        <a href="{{ icon.link }}">
+          <img src="{{ icon.image }}" alt="{{ icon.alt }}">
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% if page.faq %}
+  <h2>Pricing FAQ</h2>
+  <dl class="faq">
+    {% for item in page.faq %}
+      <div>
+        <dt>{{ item.question }}</dt>
+        <dd>{{ item.answer }}</dd>
+      </div>
+    {% endfor %}
+  </dl>
+{% endif %}
