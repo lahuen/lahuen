@@ -2,8 +2,8 @@
 # Site
 
 title: Lahuen Coop.
-url: "https://lahuen.github.io/lahuen"
-baseurl: 
+url: "https://lahuen.ar"
+baseurl: "lahuen.ar"
 google_analytics_key:
 google_maps_javascript_api_key: ${API_KEY_MAPS}
 disqus_shortname:
@@ -16,7 +16,7 @@ author:
   email:
   twitter: # twitter username without the @ symbol
 social:
-  name: Lahuen
+  name: Github
   links:
     - https://github.com/lahuen
 
