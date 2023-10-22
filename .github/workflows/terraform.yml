@@ -6,7 +6,7 @@ on:
     
 env:
   AWS_REGION : "eu-west-1"
-  GHA_ROLE: ${{ secrets.GHA_ROLE }}"
+  GHA_ROLE: ${{ secrets.GHA_ROLE }}
 
 permissions:
       id-token: write
