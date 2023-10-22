@@ -7,6 +7,7 @@ on:
 env:
   AWS_REGION : "eu-west-1"
   GHA_ROLE: ${{ secrets.GHA_ROLE }}
+  TF_ROOT: ./iac
 
 permissions:
       id-token: write
@@ -41,8 +42,8 @@ jobs:
         id: plan
         run: |
           echo "## Terraform Plan" >> $GITHUB_STEP_SUMMARY
-          terraform plan -input=false -no-color >> $GITHUB_STEP_SUMMARY
+          terraform plan -input=false -no-color -chdir="${{env.TF_ROOT}}" >> $GITHUB_STEP_SUMMARY
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
-        run: terraform apply -auto-approve -input=false
+        run: terraform apply -auto-approve -input=false -chdir="${{env.TF_ROOT}}"
