@@ -30,6 +30,9 @@ jobs:
           role-to-assume: ${{ env.GHA_ROLE }}
           role-session-name: ghaSession
           aws-region: ${{ env.AWS_REGION }}
+
+      - name: Change to iac path
+        run: cd ./iac
         
       - name: Terraform Init
         id: init
