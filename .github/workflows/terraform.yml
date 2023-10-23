@@ -35,7 +35,7 @@ jobs:
 
       - name: Debug Directory Contents
         run: |
-          pws 
+          pwd
           ls iac
         
       - name: Terraform Init
