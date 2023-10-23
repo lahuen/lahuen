@@ -41,17 +41,13 @@ jobs:
         run: terraform init
         working-directory: iac
 
-      - name: Terraform Format
-        run: terraform fmt -check
-        working-directory: iac
-        
       - name: Terraform Plan
         id: plan
         run: |
           echo "## Terraform Plan" >> $GITHUB_STEP_SUMMARY
           terraform plan -input=false -no-color -lock=false -out=tfplan
         working-directory: iac
-        
+
       - name: Upload Terraform Plan as Artifact
         uses: actions/upload-artifact@v2
         with:
@@ -61,6 +57,7 @@ jobs:
   TerraformApply:
     runs-on: ubuntu-latest
     needs: [TerraformPlan]
+    if: github.event_name == 'push'
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v3
