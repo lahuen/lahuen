@@ -72,5 +72,6 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
         
       - name: Terraform Apply
-        run: terraform apply -auto-approve -lock=false tfplan
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: terraform apply -auto-approve -lock=false $GITHUB_WORKSPACE/tfplan
         working-directory: iac
