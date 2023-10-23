@@ -47,7 +47,7 @@ jobs:
         working-directory: iac
 
       - name: Save Terraform Plan
-        run: mv tfplan $GITHUB_WORKSPACE
+        run: mv iac/tfplan $GITHUB_WORKSPACE
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
