@@ -42,8 +42,8 @@ jobs:
         id: plan
         run: |
           echo "## Terraform Plan" >> $GITHUB_STEP_SUMMARY
-          terraform plan -input=false -no-color -detailed-exitcode -chdir="./iac" >> $GITHUB_STEP_SUMMARY
+          terraform plan -input=false -no-color -detailed-exitcode >> $GITHUB_STEP_SUMMARY
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
-        run: terraform apply -auto-approve -input=false -chdir="${{env.TF_ROOT}}"
+        run: terraform apply -auto-approve -input=false
