@@ -7,7 +7,6 @@ on:
 env:
   AWS_REGION : "eu-west-1"
   GHA_ROLE: ${{ secrets.GHA_ROLE }}
-  TF_ROOT: ./iac
 
 permissions:
       id-token: write
@@ -32,7 +31,7 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Change to iac path
-        run: cd ./iac
+        run: cd iac
         
       - name: Terraform Init
         id: init
