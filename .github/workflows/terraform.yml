@@ -33,16 +33,23 @@ jobs:
       - name: Terraform Init
         id: init
         run: terraform init
+        working-directory: iac
 
       - name: Terraform Format
         run: terraform fmt -check
+        working-directory: iac
         
       - name: Terraform Plan
         id: plan
         run: |
           echo "## Terraform Plan" >> $GITHUB_STEP_SUMMARY
-          terraform plan -input=false -no-color >> $GITHUB_STEP_SUMMARY
+          terraform plan -input=false -no-color -lock=false -out=tfplan
+        working-directory: iac
+
+      - name: Save Terraform Plan
+        run: mv iac/tfplan $GITHUB_WORKSPACE
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
-        run: terraform apply -auto-approve -input=false
+        run: terraform apply -auto-approve -input=false -lock=false tfplan
+        working-directory: iac
