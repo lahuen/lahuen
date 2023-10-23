@@ -49,7 +49,7 @@ jobs:
         id: plan
         run: |
           echo "## Terraform Plan" >> $GITHUB_STEP_SUMMARY
-          terraform plan -input=false -no-color -lock=false -out=tfplan >> $GITHUB_STEP_SUMMARY
+          terraform plan -input=false -no-color -lock=false -out=iac/tfplan >> $GITHUB_STEP_SUMMARY
         working-directory: iac
 
       - name: Save tfplan to environment file
