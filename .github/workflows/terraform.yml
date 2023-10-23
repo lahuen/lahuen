@@ -49,11 +49,9 @@ jobs:
         id: plan
         run: |
           echo "## Terraform Plan" >> $GITHUB_STEP_SUMMARY
-          terraform plan -input=false -no-color -lock=false -out=iac/tfplan >> $GITHUB_STEP_SUMMARY
-        working-directory: iac
-
-      - name: Save tfplan to environment file
-        run: echo "TFPLAN=$(cat iac/tfplan)" >> $GITHUB_ENV
+          tfplan=$(terraform plan -input=false -no-color -lock=false -out=tfplan)
+          cat tfplan >> $GITHUB_STEP_SUMMARY
+          echo "TFPLAN=$tfplan" >> $GITHUB_ENV
         working-directory: iac
 
   TerraformApply:
