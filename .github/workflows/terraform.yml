@@ -3,6 +3,9 @@ on:
   pull_request:
     branches: ["main"]
     paths: ["iac/**"]
+  pull_request_target:
+    branches: ["main"]
+    paths: ["iac/**"]
   push:
     branches: ["main"]
     paths: ["iac/**"]
@@ -54,7 +57,7 @@ jobs:
 
   TerraformApply:
     runs-on: ubuntu-latest
-    needs: TerraformPlan
+    needs: [TerraformPlan]
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v3
@@ -71,9 +74,8 @@ jobs:
           role-session-name: ghaSession
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Check for Apply Trigger
-        if: github.event_name == 'issue_comment' && contains(github.event.comment.body, 'apply-terraform')
+      - name: Apply Terraform changes
         run: |
-          echo "Applying Terraform changes as requested in a comment..."
+          echo "Applying Terraform changes..."
           terraform apply -auto-approve -lock=false $GITHUB_WORKSPACE/tfplan
         working-directory: iac
