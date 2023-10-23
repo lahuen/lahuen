@@ -82,5 +82,5 @@ jobs:
       - name: Apply Terraform changes
         run: |
           echo "Applying Terraform changes..."
-          terraform apply tfplan -lock=false
+          terraform apply tfplan
         working-directory: iac
