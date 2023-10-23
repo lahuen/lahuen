@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "lahuen-dl-landing" {
-  bucket = "lahuen-dl-landin"
+  bucket = "lahuen-dl-landing"
   acl    = "private"
 
   versioning {
