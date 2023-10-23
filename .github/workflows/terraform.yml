@@ -49,10 +49,14 @@ jobs:
         id: plan
         run: |
           echo "## Terraform Plan" >> $GITHUB_STEP_SUMMARY
-          tfplan=$(terraform plan -input=false -no-color -lock=false -out=tfplan)
-          cat tfplan >> $GITHUB_STEP_SUMMARY
-          echo "TFPLAN=$tfplan" >> $GITHUB_ENV
+          terraform plan -input=false -no-color -lock=false -out=tfplan
         working-directory: iac
+        
+      - name: Upload Terraform Plan as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: tfplan
+          path: iac/tfplan
 
   TerraformApply:
     runs-on: ubuntu-latest
@@ -73,10 +77,14 @@ jobs:
           role-session-name: ghaSession
           aws-region: ${{ env.AWS_REGION }}
 
+      - name: Download Terraform Plan Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: tfplan
+          path: iac
+
       - name: Apply Terraform changes
         run: |
           echo "Applying Terraform changes..."
-          terraform apply -auto-approve -lock=false $TFPLAN
-        env:
-          TFPLAN: ${{ env.TFPLAN }}
+          terraform apply -auto-approve -lock=false tfplan
         working-directory: iac
