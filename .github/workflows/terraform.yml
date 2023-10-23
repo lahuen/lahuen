@@ -32,25 +32,22 @@ jobs:
           role-to-assume: ${{ env.GHA_ROLE }}
           role-session-name: ghaSession
           aws-region: ${{ env.AWS_REGION }}
-
-      - name: Change to iac path
-        run: cd iac
         
       - name: Terraform Init
         id: init
         run: terraform init
-        #working-directory: iac
+        working-directory: iac
 
       - name: Terraform Format
         run: terraform fmt -check
-        #working-directory: iac
+        working-directory: iac
         
       - name: Terraform Plan
         id: plan
         run: |
           echo "## Terraform Plan" >> $GITHUB_STEP_SUMMARY
           terraform plan -input=false -no-color -lock=false -out=tfplan >> $GITHUB_STEP_SUMMARY
-        #working-directory: iac
+        working-directory: iac
 
       - name: Save Terraform Plan
         run: mv iac/tfplan $GITHUB_WORKSPACE
@@ -74,9 +71,9 @@ jobs:
           role-session-name: ghaSession
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Change to iac path
-        run: cd iac
-        
-      - name: Terraform Apply
-        run: terraform apply -auto-approve -lock=false tfplan
-        #working-directory: iac
+      - name: Check for Apply Trigger
+        if: github.event_name == 'issue_comment' && contains(github.event.comment.body, 'apply-terraform')
+        run: |
+          echo "Applying Terraform changes as requested in a comment..."
+          terraform apply -auto-approve -lock=false $GITHUB_WORKSPACE/tfplan
+        working-directory: iac
