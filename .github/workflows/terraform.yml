@@ -52,8 +52,9 @@ jobs:
           terraform plan -input=false -no-color -lock=false -out=tfplan >> $GITHUB_STEP_SUMMARY
         working-directory: iac
 
-      - name: Save Terraform Plan
-        run: mv iac/tfplan $GITHUB_WORKSPACE
+      - name: Save tfplan to shared environment
+        run: echo "::set-env name=TFPLAN::$(cat iac/tfplan)"
+        working-directory: iac
 
   TerraformApply:
     runs-on: ubuntu-latest
@@ -77,5 +78,5 @@ jobs:
       - name: Apply Terraform changes
         run: |
           echo "Applying Terraform changes..."
-          terraform apply -auto-approve -lock=false $GITHUB_WORKSPACE/tfplan
+          terraform apply -auto-approve -lock=false ${{ env.TFPLAN }}
         working-directory: iac
