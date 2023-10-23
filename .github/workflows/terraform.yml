@@ -70,8 +70,10 @@ jobs:
           role-to-assume: ${{ env.GHA_ROLE }}
           role-session-name: ghaSession
           aws-region: ${{ env.AWS_REGION }}
-        
-      - name: Terraform Apply
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: terraform apply -auto-approve -lock=false $GITHUB_WORKSPACE/tfplan
+
+      - name: Check for Apply Trigger
+        if: github.event_name == 'issue_comment' && contains(github.event.comment.body, 'apply-terraform')
+        run: |
+          echo "Applying Terraform changes as requested in a comment..."
+          terraform apply -auto-approve -lock=false $GITHUB_WORKSPACE/tfplan
         working-directory: iac
