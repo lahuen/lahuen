@@ -32,6 +32,11 @@ jobs:
 
       - name: Change to iac path
         run: cd iac
+
+      - name: Debug Directory Contents
+        run: |
+          pws 
+          ls iac
         
       - name: Terraform Init
         id: init
