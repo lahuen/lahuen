@@ -3,6 +3,9 @@ on:
   pull_request:
     branches: ["main"]
     paths: ["iac/**"]
+  push:
+    branches: ["main"]
+    paths: ["iac/**"]
     
 env:
   AWS_REGION : "eu-west-1"
@@ -29,27 +32,51 @@ jobs:
           role-to-assume: ${{ env.GHA_ROLE }}
           role-session-name: ghaSession
           aws-region: ${{ env.AWS_REGION }}
+
+      - name: Change to iac path
+        run: cd iac
         
       - name: Terraform Init
         id: init
         run: terraform init
-        working-directory: iac
+        #working-directory: iac
 
       - name: Terraform Format
         run: terraform fmt -check
-        working-directory: iac
+        #working-directory: iac
         
       - name: Terraform Plan
         id: plan
         run: |
           echo "## Terraform Plan" >> $GITHUB_STEP_SUMMARY
-          terraform plan -input=false -no-color -lock=false -out=tfplan
-        working-directory: iac
+          terraform plan -input=false -no-color -lock=false -out=tfplan >> $GITHUB_STEP_SUMMARY
+        #working-directory: iac
 
       - name: Save Terraform Plan
         run: mv iac/tfplan $GITHUB_WORKSPACE
 
+  TerraformApply:
+    runs-on: ubuntu-latest
+    needs: TerraformPlan
+    steps:
+      - name: Git clone the repository
+        uses: actions/checkout@v3
+        
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.3.0
+
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ env.GHA_ROLE }}
+          role-session-name: ghaSession
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Change to iac path
+        run: cd iac
+        
       - name: Terraform Apply
-        if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
-        run: terraform apply -auto-approve -input=false -lock=false tfplan
-        working-directory: iac
+        run: terraform apply -auto-approve -lock=false tfplan
+        #working-directory: iac
