@@ -29,28 +29,24 @@ jobs:
           role-to-assume: ${{ env.GHA_ROLE }}
           role-session-name: ghaSession
           aws-region: ${{ env.AWS_REGION }}
-
-      - name: Change to iac path
-        run: cd iac
-
-      - name: Debug Directory Contents
-        run: |
-          pwd
-          ls iac
         
       - name: Terraform Init
         id: init
         run: terraform init
+        working-directory: iac
 
       - name: Terraform Format
         run: terraform fmt -check
+        working-directory: iac
         
       - name: Terraform Plan
         id: plan
         run: |
           echo "## Terraform Plan" >> $GITHUB_STEP_SUMMARY
           terraform plan -input=false -no-color -detailed-exitcode >> $GITHUB_STEP_SUMMARY
+        working-directory: iac
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
         run: terraform apply -auto-approve -input=false
+        working-directory: iac
