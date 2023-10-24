@@ -30,7 +30,7 @@ jobs:
           terraform_version: 1.3.0
           
       - name: configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ env.GHA_ROLE }}
           role-session-name: ghaSession
