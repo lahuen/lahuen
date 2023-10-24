@@ -49,10 +49,11 @@ jobs:
         working-directory: iac
 
       - name: Upload Terraform Plan as Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: tfplan
           path: iac/tfplan
+          retention-days: 3
 
       - name: Apply Terraform changes
         run: |
