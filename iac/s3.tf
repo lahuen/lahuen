@@ -4,13 +4,15 @@ resource "aws_s3_bucket" "lahuen-dl-landing" {
 
 resource "aws_s3_bucket_acl" "landing" {
   bucket = aws_s3_bucket.lahuen-dl-landing.id
-  owner {
-    id = data.aws_caller_identity.current.account_id
-  }
-  
-  dynamic "grants" {
-    for_each = []
-  }
+}
+
+resource "aws_s3_bucket_public_access_block" "landing" {
+  bucket = aws_s3_bucket.lahuen-dl-landing.id
+
+  block_public_acls = true
+  block_public_policy = true
+  ignore_public_acls = true
+  restrict_public_buckets = true
 }
 
 # resource "aws_s3_bucket_versioning" "landing" {
