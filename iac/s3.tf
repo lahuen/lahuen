@@ -62,11 +62,19 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "raw" {
 
 resource "aws_s3_bucket" "lahuen-dl-core" {
   bucket = "lahuen-dl-core"
-  acl    = "private"
+}
 
-  versioning {
-    enabled = false
-  }
+resource "aws_s3_bucket_acl" "core" {
+  bucket = aws_s3_bucket.lahuen-dl-core.id
+}
+
+resource "aws_s3_bucket_public_access_block" "core" {
+  bucket = aws_s3_bucket.lahuen-dl-core.id
+
+  block_public_acls = true
+  block_public_policy = true
+  ignore_public_acls = true
+  restrict_public_buckets = true
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "core" {
@@ -78,3 +86,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "core" {
 
   bucket = aws_s3_bucket.lahuen-dl-core.id
 }
+
+# resource "aws_s3_bucket_versioning" "core" {
+#   bucket = aws_s3_bucket.lahuen-dl-core.id
+# }
