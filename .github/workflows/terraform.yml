@@ -61,11 +61,6 @@ jobs:
       - name: Terraform Plan Status
         if: steps.plan.outcome == 'failure'
         run: exit 1
-        
-      - name: Comment PR for Apply
-        if: steps.plan.outcome == 'success'
-        run: |
-          echo "##[add-comment]Plan has passed. To apply changes, comment '/apply' on this pull request."
 
       - name: Terraform Apply
         id: apply
