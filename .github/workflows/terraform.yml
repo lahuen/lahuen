@@ -65,4 +65,4 @@ jobs:
       - name: Terraform Apply
         id: apply
         run: terraform apply -no-color -input=false --auto-approve -lock=false
-        if: steps.plan.outcome == 'success' && contains(github.event.comment.body, '/apply')
+        if: ${{ github.event.type == 'push' }} && steps.plan.outcome == 'success'
