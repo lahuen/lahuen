@@ -1,11 +1,5 @@
 name: Terraform
 on:
-  pull_request:
-    branches: ["main"]
-    paths: ["iac/**"]
-  pull_request_target:
-    branches: ["main"]
-    paths: ["iac/**"]
   push:
     branches: ["main"]
     paths: ["iac/**"]
