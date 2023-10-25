@@ -1,18 +1,6 @@
 resource "aws_s3_bucket" "lahuen-dl-landing" {
   bucket = "lahuen-dl-landing"
-}
-
-resource "aws_s3_bucket_acl" "landing" {
-  bucket = aws_s3_bucket.lahuen-dl-landing.id
-}
-
-resource "aws_s3_bucket_public_access_block" "landing" {
-  bucket = aws_s3_bucket.lahuen-dl-landing.id
-
-  block_public_acls = true
-  block_public_policy = true
-  ignore_public_acls = true
-  restrict_public_buckets = true
+  acl = "private"
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "landing" {
@@ -25,25 +13,9 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "landing" {
   bucket = aws_s3_bucket.lahuen-dl-landing.id
 }
 
-# resource "aws_s3_bucket_versioning" "landing" {
-#   bucket = aws_s3_bucket.lahuen-dl-landing.id
-# }
-
 resource "aws_s3_bucket" "lahuen-dl-raw" {
   bucket = "lahuen-dl-raw"
-}
-
-resource "aws_s3_bucket_acl" "raw" {
-  bucket = aws_s3_bucket.lahuen-dl-raw.id
-}
-
-resource "aws_s3_bucket_public_access_block" "raw" {
-  bucket = aws_s3_bucket.lahuen-dl-raw.id
-
-  block_public_acls = true
-  block_public_policy = true
-  ignore_public_acls = true
-  restrict_public_buckets = true
+  acl = "private"
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "raw" {
@@ -56,25 +28,9 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "raw" {
   bucket = aws_s3_bucket.lahuen-dl-raw.id
 }
 
-# resource "aws_s3_bucket_versioning" "raw" {
-#   bucket = aws_s3_bucket.lahuen-dl-raw.id
-# }
-
 resource "aws_s3_bucket" "lahuen-dl-core" {
   bucket = "lahuen-dl-core"
-}
-
-resource "aws_s3_bucket_acl" "core" {
-  bucket = aws_s3_bucket.lahuen-dl-core.id
-}
-
-resource "aws_s3_bucket_public_access_block" "core" {
-  bucket = aws_s3_bucket.lahuen-dl-core.id
-
-  block_public_acls = true
-  block_public_policy = true
-  ignore_public_acls = true
-  restrict_public_buckets = true
+  acl = "private"
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "core" {

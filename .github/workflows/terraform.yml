@@ -65,4 +65,4 @@ jobs:
       - name: Terraform Apply
         id: apply
         run: terraform apply -no-color -input=false --auto-approve -lock=false
-        if: ${{ github.event.type == 'push' }} && steps.plan.outcome == 'success'
+        if: ${{ github.event.type == 'push' && github.branch == 'main' }} && steps.plan.outcome == 'success'
