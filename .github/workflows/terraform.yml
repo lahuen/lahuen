@@ -3,6 +3,10 @@ on:
   push:
     branches: ["main"]
     paths: ["iac/**"]
+
+  pull_request:
+    branches: ["main"]
+    paths: ["iac/**"]
     
 env:
   AWS_REGION : "eu-west-1"
