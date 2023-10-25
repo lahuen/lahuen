@@ -44,3 +44,13 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "raw" {
 
   bucket = aws_s3_bucket.lahuen-dl-raw.id
 }
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "core" {
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = "AES256"
+    }
+  }
+
+  bucket = aws_s3_bucket.lahuen-dl-core.id
+}
