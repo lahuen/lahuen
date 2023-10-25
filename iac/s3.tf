@@ -25,10 +25,6 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "landing" {
   bucket = aws_s3_bucket.lahuen-dl-landing.id
 }
 
-# resource "aws_s3_bucket_versioning" "landing" {
-#   bucket = aws_s3_bucket.lahuen-dl-landing.id
-# }
-
 resource "aws_s3_bucket" "lahuen-dl-raw" {
   bucket = "lahuen-dl-raw"
 }
@@ -55,10 +51,6 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "raw" {
 
   bucket = aws_s3_bucket.lahuen-dl-raw.id
 }
-
-# resource "aws_s3_bucket_versioning" "raw" {
-#   bucket = aws_s3_bucket.lahuen-dl-raw.id
-# }
 
 resource "aws_s3_bucket" "lahuen-dl-core" {
   bucket = "lahuen-dl-core"
