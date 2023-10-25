@@ -1,10 +1,6 @@
 resource "aws_s3_bucket" "lahuen-dl-landing" {
   bucket = "lahuen-dl-landing"
   acl    = "private"
-
-  versioning {
-    enabled = false
-  }
 }
 
 resource "aws_s3_bucket" "lahuen-dl-raw" {
@@ -53,4 +49,9 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "core" {
   }
 
   bucket = aws_s3_bucket.lahuen-dl-core.id
+}
+
+resource "aws_s3_bucket_versioning" "landing" {
+  bucket = aws_s3_bucket.lahuen-dl-landing.id
+  enabled = false
 }
