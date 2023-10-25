@@ -5,14 +5,6 @@ resource "aws_s3_bucket" "lahuen-dl-landing" {
   versioning {
     enabled = false
   }
-
-  server_side_encryption_configuration {
-    rule {
-      apply_server_side_encryption_by_default {
-        sse_algorithm = "AES256"
-      }
-    }
-  }
 }
 
 resource "aws_s3_bucket" "lahuen-dl-raw" {
@@ -21,14 +13,6 @@ resource "aws_s3_bucket" "lahuen-dl-raw" {
 
   versioning {
     enabled = false
-  }
-
-  server_side_encryption_configuration {
-    rule {
-      apply_server_side_encryption_by_default {
-        sse_algorithm = "AES256"
-      }
-    }
   }
 }
 
@@ -39,12 +23,24 @@ resource "aws_s3_bucket" "lahuen-dl-core" {
   versioning {
     enabled = false
   }
+}
 
-  server_side_encryption_configuration {
-    rule {
-      apply_server_side_encryption_by_default {
-        sse_algorithm = "AES256"
-      }
+resource "aws_s3_bucket_server_side_encryption_configuration" "landing" {
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = "AES256"
     }
   }
+
+  bucket = aws_s3_bucket.lahuen-dl-landing.id
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "raw" {
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = "AES256"
+    }
+  }
+
+  bucket = aws_s3_bucket.lahuen-dl-raw.id
 }
