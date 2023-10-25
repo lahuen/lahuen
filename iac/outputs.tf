@@ -9,3 +9,5 @@ output "lahuen_dl_bucket_raw" {
 output "lahuen_dl_bucket_core" {
   value = aws_s3_bucket.lahuen-dl-core.bucket
 }
+
+##
