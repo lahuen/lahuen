@@ -51,7 +51,6 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "core" {
   bucket = aws_s3_bucket.lahuen-dl-core.id
 }
 
-resource "aws_s3_bucket_versioning" "landing" {
-  bucket = aws_s3_bucket.lahuen-dl-landing.id
-  enabled = false
-}
+#resource "aws_s3_bucket_versioning" "landing" {
+#  bucket = aws_s3_bucket.lahuen-dl-landing.id
+#}
