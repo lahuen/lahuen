@@ -23,7 +23,6 @@ permissions:
   
 jobs:
   Terraform:
-    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: Git clone the repository
@@ -63,12 +62,12 @@ jobs:
         if: steps.plan.outcome == 'failure'
         run: exit 1
         
+      - name: Comment PR for Apply
+        if: steps.plan.outcome == 'success'
+        run: |
+          echo "##[add-comment]Plan has passed. To apply changes, comment '/apply' on this pull request."
+
       - name: Terraform Apply
         id: apply
         run: terraform apply -no-color -input=false --auto-approve -lock=false
-        if: github.event_name == 'push'
-        continue-on-error: true
-        
-      - name: Terraform Apply Status
-        if: steps.apply.outcome == 'failure'
-        run: exit 1
+        if: steps.plan.outcome == 'success' && contains(github.event.comment.body, '/apply')
