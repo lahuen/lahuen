@@ -1,7 +1,21 @@
 resource "aws_s3_bucket" "lahuen-dl-landing" {
   bucket = "lahuen-dl-landing"
-  acl    = "private"
 }
+
+resource "aws_s3_bucket_acl" "landing" {
+  bucket = aws_s3_bucket.lahuen-dl-landing.id
+  owner {
+    id = data.aws_caller_identity.current.account_id
+  }
+  
+  dynamic "grants" {
+    for_each = []
+  }
+}
+
+# resource "aws_s3_bucket_versioning" "landing" {
+#   bucket = aws_s3_bucket.lahuen-dl-landing.id
+# }
 
 resource "aws_s3_bucket" "lahuen-dl-raw" {
   bucket = "lahuen-dl-raw"
@@ -50,7 +64,3 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "core" {
 
   bucket = aws_s3_bucket.lahuen-dl-core.id
 }
-
-#resource "aws_s3_bucket_versioning" "landing" {
-#  bucket = aws_s3_bucket.lahuen-dl-landing.id
-#}
