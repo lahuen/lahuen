@@ -56,23 +56,17 @@ header {
 }
 
 .screenshot{
+	max-width: 100%;
+	height: auto;
 	display: grid;
-	place-content: center;
-	position: relative;
+	box-shadow: 0 1px 0 #ccc, 0 1px 0 1px #eee;
 	border: solid 0.5em rgba(#000, .03);
-	padding: 0 1em;
-	height: 50vmin;
-	max-width: 13em; max-height: 7em;
-	box-shadow: 2px 2px 5px rgba(#000, .2), 
-							2px 2px 17px rgba(#000, .35), 
-							2px 2px 25px rgba(#000, .5);
-	background: 50%/ cover 
-								border-box 
-								padding-box;
-	color: #fff;
-	font: 600 3em/ 1.25 segoe script, comic sans ms, cursive;
-	text-align: center;
-	text-shadow: 1px 1px #000;
+	border-radius: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	background: 50%/ cover border-box 4px 4px no-repeat;
+	padding: 20px 0 0 0;
+	position: relative;
 }
 
 section {
