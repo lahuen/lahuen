@@ -1,6 +1,6 @@
 - links:
-  - name: APP
-    link: /app/
+  #- name: APP
+  #  link: /app/
   - name: Blog
     link: /blog/
   - name: About
@@ -8,18 +8,18 @@
   - name: Contact
     link: /contact/
 - links:
-  - name: Login
-    link: /
-    new_window: false
-  - name: Sign Up
-    link: /
-    new_window: false
-  - name: Docs
-    link: /
-    new_window: false
-  - name: Status
-    link: /
-    new_window: false
+  #- name: Login
+  #  link: /
+  #  new_window: false
+  #- name: Sign Up
+  #  link: /
+  #  new_window: false
+  #- name: Docs
+  #  link: /
+  #  new_window: false
+  #- name: Status
+  #  link: /
+  #  new_window: false
 - links:
   - name: Facebook
     link: https://facebook.com/
