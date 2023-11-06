@@ -2,8 +2,8 @@
 # Site
 
 title: Lahuen Coop.
-url: "https://www.lahuen.ar"
-baseurl: "https://www.lahuen.ar"
+url: "https://lahuen.ar"
+baseurl: "https://lahuen.ar"
 google_analytics_key:
 google_maps_javascript_api_key: AIzaSyBnvkEitlBRFs1yXU2QGtXJrxka4FTRnSQ
 disqus_shortname:
