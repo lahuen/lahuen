@@ -56,16 +56,46 @@ header {
 }
 
 .screenshot{
-	max-width: 100%;
-	height: auto;
-	display: block;
-	box-shadow: 0 1px 0 #ccc, 0 1px 0 1px #eee;
-	border-radius: 2px;
-	margin-left: auto;
-	margin-right: auto;
-	background: #DDD url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2244%22%20height%3D%2212%22%20viewBox%3D%220%200%2044%2012%22%3E%3Ccircle%20cx%3D%226%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3C%2Fsvg%3E') 4px 4px no-repeat;
-	padding: 20px 0 0 0;
+	display: grid;
+	place-content: center;
 	position: relative;
+	border: solid $b rgba(#000, .03);
+	padding: 0 1em;
+	height: 50vmin;
+	max-width: 13em; max-height: 7em;
+	box-shadow: 2px 2px 5px rgba(#000, .2), 
+							2px 2px 17px rgba(#000, .35), 
+							2px 2px 25px rgba(#000, .5);
+	background: $url 50%/ cover 
+								border-box 
+								padding-box;
+	color: #fff;
+	font: 600 3em/ 1.25 segoe script, comic sans ms, cursive;
+	text-align: center;
+	text-shadow: 1px 1px #000;
+	
+	&:before {
+		position: absolute;
+		z-index: -1; /* put it *behind* parent */
+		/* go outside padding-box by 
+		 * a border-width ($b) in every direction */
+		top: -$b; right: -$b; bottom: -$b; left: -$b;
+		border: inherit;
+		border-color: transparent;
+		background: inherit;
+		background-clip: border-box;
+		/* -webkit-prefixed version 
+		 * still needed for 
+		 * some mobile browsers 💔😭 */
+		-webkit-filter: $blur;
+						filter: $blur;
+		/* -webkit-prefixed version 
+		 * still needed for 
+		 * some mobile browsers 💔😭 */
+		-webkit-clip-path: $rect;
+						clip-path: $rect;
+		content: ''
+	}
 }
 
 section {
