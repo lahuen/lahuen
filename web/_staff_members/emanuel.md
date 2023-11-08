@@ -1,6 +1,6 @@
 ---
 name: Emanuel
 position: Developer
-image_path: https://source.unsplash.com/collection/139386/604x604?a=.png
+image_path: https://imgur.com/CCe0el5
 blurb: Ema is a software developer who has worked in different industries.
 ---
