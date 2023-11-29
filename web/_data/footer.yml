@@ -3,9 +3,9 @@
   #  link: /app/
   - name: Blog
     link: /blog/
-  - name: About
+  - name: Nosotros
     link: /about/
-  - name: Contact
+  - name: Contacto
     link: /contact/
 - links:
   #- name: Login
