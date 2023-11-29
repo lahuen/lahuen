@@ -1,18 +1,18 @@
 # ----
 # Site
 
-title: Cooperativa de Trabajo LTDA
+title: Lahuen
 url: "https://www.lahuen.ar"
 baseurl: "https://www.lahuen.ar"
 google_analytics_key: G-R70V6LDQ7S
 google_maps_javascript_api_key: AIzaSyBnvkEitlBRFs1yXU2QGtXJrxka4FTRnSQ
-disqus_shortname:
+disqus_shortname: 
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /images/logo.png
-description: Plant breeding of medicinal Cannabis genotypes and Data Analytics.
+description: Cooperativa de Trabajo LTDA.
 author:
-  name:
+  name: Lahuen
   email: info@lahuen.ar
   twitter: # twitter username without the @ symbol
 social:
@@ -27,7 +27,7 @@ timezone: Etc/UTC
 
 collections:
   staff_members:
-    _hide_content: true
+    _hide_content: false
 
 paginate: 10
 paginate_path: "/blog/:num/"
