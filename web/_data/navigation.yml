@@ -6,11 +6,11 @@
   link: /blog/
   new_window: false
   highlight: false
-- name: About
+- name: Nosotros
   link: /about/
   new_window: false
   highlight: false
-- name: Contact
+- name: Contacto
   link: /contact/
   new_window: false
   highlight: false
