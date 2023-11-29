@@ -1,7 +1,7 @@
 ---
-title: Contact
-heading: Get in touch today
-description: We'd love to help you.
+title: Contacto
+heading: Formulario de contacto
+description: Estaremos felices de poder ayudarte si necesitás información adicional sobre nuestro proyecto.
 
 map:
   latitude: -34.6506
@@ -16,20 +16,20 @@ map:
 	<form action="https://formspree.io/f/xjvqzeen" method="POST" class="contact-form">
 		<input type="hidden" name="_next" value="https://lahuen.ar">
 
-		<label for="name">Full Name</label>
-		<input type="text" name="name" id="name" placeholder="Enter your name..." />
+		<label for="name">Nombre completo</label>
+		<input type="text" name="name" id="name" placeholder="Ingresa tu nombre..." />
 
-		<label for="email">Email Address</label>
-		<input type="email" name="email" id="email" placeholder="Enter your email..." required />
+		<label for="email">Email</label>
+		<input type="email" name="email" id="email" placeholder="Ingresa tu mail..." required />
 
-		<label for="message">Message</label>
-		<textarea name="message" id="message" placeholder="Enter your message..."></textarea>
+		<label for="message">Mensaje</label>
+		<textarea name="message" id="message" placeholder="Tu mensaje va aqui..."></textarea>
 
-		<input type="submit" value="Send Message" />
+		<input type="submit" value="Enviar" />
 	</form>
 
 	<div class="contact-details">
-		<h3 class="editable">Address</h3>
+		<h3 class="editable">Donde estamos</h3>
 		<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>
 
 		<h3 class="editable">Email</h3>
