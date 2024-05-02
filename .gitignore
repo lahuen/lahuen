@@ -34,3 +34,4 @@ override.tf.json
 terraform.rc
 
 web/.DS_Store
+.DS_Store
