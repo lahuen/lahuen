@@ -7,6 +7,8 @@
     link: /about/
   - name: Contacto
     link: /contact/
+  - name: Productos
+    link: /products/
 - links:
   #- name: Login
   #  link: /
