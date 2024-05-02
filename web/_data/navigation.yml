@@ -14,6 +14,10 @@
   link: /contact/
   new_window: false
   highlight: false
+- name: Productos
+  link: /products/
+  new_window: false
+  highlight: true
 #- name: Login
 #  link: /
 #  new_window: false
