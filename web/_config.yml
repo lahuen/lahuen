@@ -65,12 +65,8 @@ defaults:
       full_width: true
 
 jekyll-archives:
-  enabled: []
-  layout: archive
-  permalinks:
-    year: "/:year/"
-    month: "/:year/:month/"
-    category: "/category/:name/"
+  enabled:
+    - categories
 
 plugins:
   - jekyll-archives
