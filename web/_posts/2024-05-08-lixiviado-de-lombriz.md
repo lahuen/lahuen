@@ -6,7 +6,7 @@ categories:
 author_staff_member: Max
 ---
 
-En el amplio mundo de la agricultura sostenible, un componente valioso emerge de la actividad de un humilde ser: la lombriz. Más específicamente, su lixiviado, un líquido rico en nutrientes que se convierte en un elixir para el suelo. En este artículo, exploraremos qué es el lixiviado de lombriz, cómo se produce, y por qué es tan beneficioso para los cultivos.
+En el amplio mundo de la agricultura sostenible, un componente valioso emerge de la actividad de un humilde ser: la lombriz. Más específicamente, su lixiviado, un líquido rico en nutrientes que se convierte en un elixir para el suelo. En este artículo, exploraremos qué es el lixiviado de lombriz californiana, cómo se produce, y por qué es tan beneficioso para los cultivos.
 
 ![Lombriz](https://i.imgur.com/T6JQSRe.jpg)
 
@@ -28,9 +28,11 @@ El lixiviado de lombriz es el líquido que se desprende del proceso de descompos
 
 ## Aplicaciones del lixiviado de lombriz
 
-- Fertilización de cultivos: Se puede aplicar directamente al suelo como fertilizante líquido o diluirlo en agua para regar las plantas.
-- Producción de compost: El lixiviado de lombriz puede acelerar el proceso de compostaje cuando se añade a pilas de desechos orgánicos, aumentando la actividad microbiana y la descomposición.
-- Control de plagas y enfermedades: Algunos estudios sugieren que el lixiviado de lombriz posee propiedades repelentes contra ciertos insectos y patógenos del suelo, lo que puede ayudar a reducir la necesidad de pesticidas químicos.
+1. Fertilización de cultivos: Se puede usar diluido en agua para regar las plantas o aplicación foliar.
+
+2. Producción de compost: El lixiviado de lombriz puede acelerar el proceso de compostaje cuando se añade a pilas de desechos orgánicos, aumentando la actividad microbiana y la descomposición.
+
+3. Control de plagas y enfermedades: Algunos estudios sugieren que el lixiviado de lombriz posee propiedades repelentes contra ciertos insectos y patógenos del suelo, lo que puede ayudar a reducir la necesidad de pesticidas químicos.
 
 ![Cannabis](https://i.imgur.com/qIHp5Df.jpeg[/img])
 
