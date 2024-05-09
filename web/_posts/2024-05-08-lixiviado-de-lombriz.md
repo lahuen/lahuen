@@ -3,7 +3,7 @@ date: 2024-05-08
 title: Lixiviado de lombriz
 categories:
   - products
-author_staff_member: Lahuen
+author_staff_member: max
 ---
 
 En el amplio mundo de la agricultura sostenible, un componente valioso emerge de la actividad de un humilde ser: la lombriz. Más específicamente, su lixiviado, un líquido rico en nutrientes que se convierte en un elixir para el suelo. En este artículo, exploraremos qué es el lixiviado de lombriz californiana, cómo se produce, y por qué es tan beneficioso para los cultivos.
