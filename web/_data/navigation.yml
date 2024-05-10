@@ -15,7 +15,7 @@
   new_window: false
   highlight: false
 - name: Productos
-  link: /_products/
+  link: /products/
   new_window: false
   highlight: false
 #- name: Login
