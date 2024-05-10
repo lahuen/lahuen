@@ -35,3 +35,11 @@ terraform.rc
 
 web/.DS_Store
 .DS_Store
+web/.jekyll-cache/
+web/.jekyll-cache/Jekyll/Cache/
+web/vendor/bundle
+web/Gemfile.lock
+web/_site
+web/*.gem
+web/*.rbc
+web/.bundle/
