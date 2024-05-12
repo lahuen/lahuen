@@ -1,0 +1,49 @@
+---
+title: Tienda
+description: Descubre nuestros productos.
+---
+
+<div class="text-container">
+  <p class="product-description">
+    Disclaimer: con el fin de mantener un precio a lo largo del tiempo elegimos
+    utilizar precio en USD como referencia, tomando la cotización de la fecha de
+    operación.
+  </p>
+
+  <!-- List of Products -->
+  <ul class="product-gallery">
+    {% assign products_per_page = 4 %} {% assign num_pages = site.products |
+    size | divided_by: products_per_page | plus: 1 %} {% assign current_page =
+    paginator.page | default: 1 %} {% assign start_index = products_per_page |
+    times: current_page | minus: products_per_page %} {% assign end_index =
+    products_per_page | times: current_page | minus: 1 %} {% for product in
+    site.products limit: end_index %} {% if forloop.index0 >= start_index %}
+    <li class="product-item">
+      <!-- Product Image -->
+      <div class="square-image">
+        <img src="{{ product.image }}" alt="{{ product.name }}" />
+      </div>
+
+      <!-- Product Details -->
+      <div class="product-details-container">
+        <h3><a href="{{ product.url }}">{{ product.name }}</a></h3>
+        <p class="product-description">{{ product.desc }}</p>
+        <div class="button-container">
+          <a href="#" class="button">Menor USD{{ product.price }}</a>
+          <a href="#" class="button">Mayor USD{{ product.ws_price }}</a>
+        </div>
+        <!-- Agregar otros detalles del producto según sea necesario -->
+      </div>
+    </li>
+    {% endif %} {% endfor %}
+  </ul>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    {% if current_page > 1 %}
+    <a href="{{ paginator.previous_page_path }}" class="button">Anterior</a>
+    {% endif %} {% if current_page < num_pages %}
+    <a href="{{ paginator.next_page_path }}" class="button">Siguiente</a>
+    {% endif %}
+  </div>
+</div>

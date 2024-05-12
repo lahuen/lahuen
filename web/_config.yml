@@ -26,8 +26,10 @@ social:
 timezone: Etc/UTC
 
 collections:
-  - staff_members
-  - products
+  staff_members:
+    output: false
+  products:
+    output: true
 
 paginate: 10
 paginate_path: "/blog/:num/"

@@ -1,65 +1,73 @@
-.container, .text-container {
-	margin: 0 auto;
-	position: relative;
-	padding: 0 20px;
+.container,
+.text-container {
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
 }
 
 .text-container {
-	max-width: 750px;
+  max-width: 750px;
 }
 
 .container {
-	max-width: 1140px;
+  max-width: 1140px;
 
-	&.max-container {
-		max-width: 100%;
-		padding: 0;
-	}
+  &.max-container {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 header {
-	color: #fff;
-	padding: 20px 0;
-	background: $brand-color; /* Old browsers */
-	background: linear-gradient(to bottom, $brand-color 0%, $middle-gradient-color 100%) no-repeat $brand-color;
+  color: #fff;
+  padding: 20px 0;
+  background: $brand-color; /* Old browsers */
+  background: linear-gradient(
+      to bottom,
+      $brand-color 0%,
+      $middle-gradient-color 100%
+    )
+    no-repeat $brand-color;
 
-	a {
-		color: #fff;
-		text-decoration: none;
-		z-index: 1;
-		position: relative;
+  a {
+    color: #fff;
+    text-decoration: none;
+    z-index: 1;
+    position: relative;
 
-		&:hover {
-			text-decoration: none;
-		}
-	}
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
-	.company-name {
-		font-size: 1.7em;
-		line-height: 0;
+  .company-name {
+    font-size: 1.7em;
+    line-height: 0;
 
-		a {
-			display: inline-block;
-		}
+    a {
+      display: inline-block;
+    }
 
-		img {
-			display: block;
-			width: auto;
-		}
-	}
+    img {
+      display: block;
+      width: auto;
+    }
+  }
 }
 
 .content {
-	background: #fff;
-	padding: 1px 0 0 0;
-	position: relative;
+  background: #fff;
+  padding: 1px 0 0 0;
+  position: relative;
 }
 
 .screenshot {
   max-width: 100%;
   height: auto;
   display: block;
-  box-shadow: 0 1px 0 #ccc, 0 1px 0 1px #eee;
+  box-shadow:
+    0 1px 0 #ccc,
+    0 1px 0 1px #eee;
   border: none;
   border-radius: 2px;
   margin-left: auto;
@@ -69,106 +77,154 @@ header {
 }
 
 section {
-	padding: 100px 0;
+  padding: 100px 0;
 }
 
 section + section {
-	padding-top: 0;
+  padding-top: 0;
 }
 
 .subtext {
-	margin-top: 10px;
-	text-align: center;
+  margin-top: 10px;
+  text-align: center;
 }
 
-
 .cta {
-	margin: 60px 0;
+  margin: 60px 0;
 }
 
 .page h2 {
-	text-align: center;
+  text-align: center;
 }
 
 blockquote {
-	padding: 18px 25px;
-	margin: 0;
-	quotes: "\201C""\201D""\2018""\2019";
-	font-style: italic;
+  padding: 18px 25px;
+  margin: 0;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  font-style: italic;
 
-	.author {
-		display: block;
-		font-weight: bold;
-		margin: 10px 0 0 0;
-		font-size: .85em;
-		font-style: normal;
-	}
+  .author {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    font-size: 0.85em;
+    font-style: normal;
+  }
 
-	p {
-		display: inline;
-	}
+  p {
+    display: inline;
+  }
 }
 
 blockquote:before {
-	color: #ccc;
-	content: open-quote;
-	font-size: 4em;
-	line-height: 0.1em;
-	margin-right: 0.25em;
-	vertical-align: -0.4em;
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
 }
 
 .square-image {
-	width: 150px;
-	height: 150px;
-	overflow: hidden;
-	margin: 25px auto 0 auto;
-	position: relative;
-	border-radius: 200px;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin: 25px auto 0 auto;
+  position: relative;
+  border-radius: 200px;
 
-	img {
-		position: absolute;
-		left: -1000%;
-		right: -1000%;
-		top: -1000%;
-		bottom: -1000%;
-		margin: auto;
-		width: 300px;
-	}
+  img {
+    position: absolute;
+    left: -1000%;
+    right: -1000%;
+    top: -1000%;
+    bottom: -1000%;
+    margin: auto;
+    width: 300px;
+  }
 }
 
 .page {
-	margin-bottom: 0;
-	padding-bottom: 80px;
+  margin-bottom: 0;
+  padding-bottom: 80px;
 }
 
 .center-text {
-	text-align: center;
+  text-align: center;
 }
 
 .editor-link {
- 	display: none;
-	margin-top: 0;
-	.btn {
-		border: 0;
-		border-radius: 2px;
-		width: 100%;
-		max-width: 500px;
-		box-sizing: border-box;
-		font-size: 2rem;
-		text-decoration: none;
-		padding: 10px 15px;
-		margin: 0;
-		font-size: 18px;
-		cursor: pointer;
-		background-color: #f7e064;
-		color: #333;
-		box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
+  display: none;
+  margin-top: 0;
+  .btn {
+    border: 0;
+    border-radius: 2px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #f7e064;
+    color: #333;
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
 
-		&:hover {
-			background-color: #f4d525;
-			color: #333;
-		}
-	}
+    &:hover {
+      background-color: #f4d525;
+      color: #333;
+    }
+  }
+}
 
+.product-gallery {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; /* Centrar la lista de productos en la página */
+  max-width: 800px; /* Ajustar el ancho máximo de la lista de productos */
+}
+
+.product-item {
+  display: inline-block; /* Cambiar el comportamiento a inline-block */
+  width: 45%; /* Establecer un ancho para cada elemento */
+  margin: 10px; /* Agregar un margen entre los elementos */
+  vertical-align: top; /* Alinear los elementos en la parte superior */
+}
+
+.product-details-container {
+  text-align: center; /* Justificar el texto dentro de los detalles del producto */
+}
+
+.product-details-container h3,
+.product-details-container .product-description {
+  margin-bottom: 5px; /* Reducir el margen inferior entre el título y la descripción */
+}
+
+.button-container {
+  text-align: center; /* Centrar los botones */
+}
+
+/* Agregar estilos para los botones */
+.button-container .button {
+  margin: 5px; /* Agregar un pequeño margen entre los botones */
+}
+
+.button a,
+input[type="submit"] {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 30px;
+  background: #f7e064; /* Color de fondo */
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: 0.2s ease-in-out;
+}
+
+.button a:hover,
+input[type="submit"]:hover {
+  border: 1px solid #fff;
+  background: #f4d525; /* Color de fondo al pasar el ratón */
+  cursor: pointer;
 }
