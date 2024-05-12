@@ -1,0 +1,17 @@
+{% for product in include.products %}
+<li class="product-item">
+  <!-- Product Image -->
+  <div class="square-image">
+    <img src="{{ product.image }}" alt="{{ product.name }}" />
+  </div>
+
+  <!-- Product Details -->
+  <div class="product-details">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <button class="button">x Menor USD{{ product.price }}</button>
+    <button class="button">x Mayor USD{{ product.ws_price }}</button>
+    <!-- Agregar otros detalles del producto según sea necesario -->
+  </div>
+</li>
+{% endfor %}
