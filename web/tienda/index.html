@@ -1,13 +1,28 @@
 ---
-title: Tienda
-description: Descubre nuestros productos.
+title: Lahuen Store
+description: Si sos usuario u ONG registrado/a en REPROCANN podés adquirir tu esqueje o plantin legal, contratar nuestros servicios de fitomejoramiento o adquirir nuestros biofertilizantes para sacarle mayor rendimiento a tu cultivo.
 ---
 
 <div class="text-container">
-  <p class="product-description">
-    Disclaimer: con el fin de mantener un precio a lo largo del tiempo elegimos
-    utilizar precio en USD como referencia, tomando la cotización de la fecha de
-    operación.
+  <div class="about">
+    Sobre los precios publicados: con el fin de mantener un precio a lo largo
+    del tiempo elegimos utilizar precio en USD como referencia, tomando la
+    cotización de la fecha de operación. Sobre la venta por mayor, consideramos
+    mayorista a partir de 5 unidades del mismo producto.
+  </div>
+
+  <!-- Filter Section -->
+  <p class="post-details">
+    {% assign categories = "" | split: "," %} {% for product in site.products %}
+    {% unless categories contains product.category %} {% assign categories =
+    categories | push: product.category %} {% endunless %} {% endfor %} {% for
+    category in categories %}
+    <span class="blog-filter">
+      <a href="#" data-category="{{ category | slugify }}"
+        >{{ category | capitalize }}</a
+      >
+    </span>
+    {% endfor %}
   </p>
 
   <!-- List of Products -->
@@ -18,9 +33,17 @@ description: Descubre nuestros productos.
     times: current_page | minus: products_per_page %} {% assign end_index =
     products_per_page | times: current_page | minus: 1 %} {% for product in
     site.products limit: end_index %} {% if forloop.index0 >= start_index %}
-    <li class="product-item">
+    <li class="product-item" data-category="{{ product.category | slugify }}">
       <!-- Product Image -->
       <div class="square-image">
+        <!-- Sale Badge Container -->
+        {% if product.off and product.off > 0 %}
+        <div class="sale-badge">
+          <span>{{ product.off }}% OFF</span>
+        </div>
+        {% endif %}
+
+        <!-- Product Image -->
         <img src="{{ product.image }}" alt="{{ product.name }}" />
       </div>
 
@@ -28,11 +51,30 @@ description: Descubre nuestros productos.
       <div class="product-details-container">
         <h3><a href="{{ product.url }}">{{ product.name }}</a></h3>
         <p class="product-description">{{ product.desc }}</p>
-        <div class="button-container">
-          <a href="#" class="button">Menor USD{{ product.price }}</a>
-          <a href="#" class="button">Mayor USD{{ product.ws_price }}</a>
+
+        <!-- price -->
+        <div class="price-section">
+          <div class="price-details">
+            <h4>x Menor:</h4>
+            <div class="button-container">
+              <a href="#" class="button">USD {{ product.price }}</a>
+            </div>
+          </div>
         </div>
-        <!-- Agregar otros detalles del producto según sea necesario -->
+
+        <!-- wholesale price -->
+        {% if product.ws_price != "" %}
+        <div class="price-section">
+          <div class="price-details">
+            <h4>x Mayor:</h4>
+            <div class="button-container">
+              <a href="#" class="button">USD {{ product.ws_price }}</a>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Add other descriptions about products -->
       </div>
     </li>
     {% endif %} {% endfor %}
@@ -47,3 +89,16 @@ description: Descubre nuestros productos.
     {% endif %}
   </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $(".blog-filter a").click(function (e) {
+      e.preventDefault();
+      var category = $(this).data("category");
+
+      $(".product-item").hide();
+      $('.product-item[data-category="' + category + '"]').show();
+    });
+  });
+</script>

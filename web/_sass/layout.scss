@@ -153,32 +153,6 @@ blockquote:before {
   text-align: center;
 }
 
-.editor-link {
-  display: none;
-  margin-top: 0;
-  .btn {
-    border: 0;
-    border-radius: 2px;
-    width: 100%;
-    max-width: 500px;
-    box-sizing: border-box;
-    font-size: 2rem;
-    text-decoration: none;
-    padding: 10px 15px;
-    margin: 0;
-    font-size: 18px;
-    cursor: pointer;
-    background-color: #f7e064;
-    color: #333;
-    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
-
-    &:hover {
-      background-color: #f4d525;
-      color: #333;
-    }
-  }
-}
-
 .product-gallery {
   list-style: none;
   padding: 0;
@@ -194,37 +168,72 @@ blockquote:before {
 }
 
 .product-details-container {
-  text-align: center; /* Justificar el texto dentro de los detalles del producto */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .product-details-container h3,
 .product-details-container .product-description {
-  margin-bottom: 5px; /* Reducir el margen inferior entre el título y la descripción */
+  margin-bottom: 5px;
+}
+
+.price-details {
+  display: inline-flex;
+  align-items: center;
+}
+
+.price-details h4 {
+  color: #9e9b9c;
+  margin-right: 10px;
 }
 
 .button-container {
-  text-align: center; /* Centrar los botones */
+  text-align: center;
 }
 
-/* Agregar estilos para los botones */
 .button-container .button {
-  margin: 5px; /* Agregar un pequeño margen entre los botones */
-}
-
-.button a,
-input[type="submit"] {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 30px;
+  background-color: $brand-color;
   color: #fff;
   text-decoration: none;
-  padding: 10px 30px;
-  background: #f7e064; /* Color de fondo */
   border-radius: 3px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $secondary-brand-color;
+    border: 1px solid #fff;
+    cursor: pointer;
+  }
 }
 
-.button a:hover,
-input[type="submit"]:hover {
-  border: 1px solid #fff;
-  background: #f4d525; /* Color de fondo al pasar el ratón */
-  cursor: pointer;
+.button.alt a {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 16px 50px;
+}
+
+.button.alt a:hover {
+  background: #fff;
+  color: $brand-color;
+}
+
+.blog-filter a.active {
+  background-color: #ccc;
+}
+
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
 }

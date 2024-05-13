@@ -2,7 +2,7 @@
 date: 2024-05-08
 title: Lixiviado de lombriz
 categories:
-  - products
+  - tienda
 author_staff_member: max
 ---
 
