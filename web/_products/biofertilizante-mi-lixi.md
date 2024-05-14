@@ -7,5 +7,5 @@ price: "10.00"
 sku: B0001
 stock: 15
 styles:
-  - image: "https://i.imgur.com/DphPJUl.jpg"
+  - image: "https://i.imgur.com/DphPJUls.jpg"
 ---
