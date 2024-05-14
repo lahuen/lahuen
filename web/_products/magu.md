@@ -1,11 +1,11 @@
 ---
-identifier: p-0002
-name: Plantin Magu
-price: 20.00
-ws_price: 16.00
-image: "https://i.imgur.com/aY9QmIU.png"
-desc: "Plantin de aprox. 15 cm de altura."
-category: plantas
----
+name: Plantin La Maga Magu
+description_markdown: Santanesia x Onora
 
-Mas detalle de la planta.
+garment_type:
+price: "10.00"
+sku: C2133
+stock: 25
+styles:
+  - image: "https://i.imgur.com/aY9QmIU.png"
+---

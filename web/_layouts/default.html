@@ -1,18 +1,69 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    {% seo %} {% feed_meta %}
-
+    {% seo %}
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css" />
     <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png" />
+    {% feed_meta %}
 
-    {% if site.google_analytics %} {% include analytics.html %} {% endif %}
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WQDZCT8S");
+    </script>
+    <!-- End Google Tag Manager <-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.css"
+    />
+    <link rel="preconnect" href="https://app.snipcart.com" />
+    <link rel="preconnect" href="https://cdn.snipcart.com" />
+    {% if site.snipcart_key %}
+    <script
+      async
+      src="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.js"
+    ></script>
+    <div
+      hidden
+      id="snipcart"
+      data-api-key="{{ site.snipcart_key }}"
+      data-currency="{{ site.snipcart_currency }}"
+      data-config-modal-style="side"
+    ></div>
+    {% endif %}
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WQDZCT8S"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
       <div class="container">
         <div class="company-name">
@@ -78,5 +129,9 @@
         return false;
       };
     </script>
+    <script
+      src="{{ site.baseurl }}/js/application.js"
+      type="text/javascript"
+    ></script>
   </body>
 </html>

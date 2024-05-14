@@ -1,12 +1,11 @@
 ---
-identifier: p-0003
 name: Biofertilizante Mi Lixi
-price: 10.00
-ws_price: 7.50
-image: "https://i.imgur.com/DphPJUl.jpg"
-desc: "Bidon de 5 litros."
-category: biofertilizantes
-off: 25
----
+description_markdown: Fertilizante orgánico natural Lixiviado de limbriz californiana.
 
-Fertilizante orgánico natural Lixiviado de limbriz californiana.
+garment_type:
+price: "10.00"
+sku: B0001
+stock: 15
+styles:
+  - image: "https://i.imgur.com/DphPJUl.jpg"
+---
