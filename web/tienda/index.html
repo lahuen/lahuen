@@ -28,6 +28,9 @@ subtitle: Si sos usuario u ONG registrado/a en REPROCANN podés adquirir tu esqu
               {{ product.description_markdown | truncate: 38 | markdownify }}
             </div>
             <p>USD {{ product.price }}</p>
+            <div class="button">
+              {% include snipcart-button.html product=page %}
+            </div>
           </div>
         </li>
         {% endfor %}
