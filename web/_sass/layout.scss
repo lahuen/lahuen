@@ -29,6 +29,20 @@ header {
     )
     no-repeat $brand-color;
 
+  &__checkout {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-weight: bold;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+
   a {
     color: #fff;
     text-decoration: none;
