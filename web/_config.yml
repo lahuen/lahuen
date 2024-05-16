@@ -2,7 +2,7 @@
 # Site
 
 title: Lahuen
-url: "https://www.lahuen.ar"
+url: "https://www.lahuen.ar/"
 baseurl: "https://www.lahuen.ar"
 google_analytics_key: GTM-WQDZCT8S
 google_maps_javascript_api_key: AIzaSyBnvkEitlBRFs1yXU2QGtXJrxka4FTRnSQ
@@ -67,6 +67,11 @@ defaults:
       path: "contact.html"
     values:
       full_width: true
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"
 
 jekyll-archives:
   enabled:

@@ -105,23 +105,72 @@
     font-size: 1.1rem;
   }
 
-  .snipcart-add-item {
-    -webkit-appearance: none;
-    color: #222;
-    text-decoration: none;
-    border: 0;
-    background: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    padding: 10px 15px 15px;
-    float: right;
-    cursor: pointer;
-    line-height: 1;
-    margin-top: 10px;
-
-    &:hover {
-      background: #f5f5f5;
-      color: #000;
+  .product {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    /**
+   * prevent children elements from "bleeding through" in 3D space
+   * by creating a 3D transform container in the parent
+   */
+    transform: translate3d(0px, 0px, 0px);
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
     }
+
+    &:nth-last-of-type(odd) & {
+      &__information {
+        margin-left: 0;
+      }
+
+      &__image {
+        transform: perspective(650px) rotateZ(5deg) rotateX(-2.5deg)
+          rotateY(-15deg) scale(0.8) translateX(30px);
+        box-shadow: 30px 30px 50px
+          transparentize(darken($brand-color, 50%), 0.9);
+      }
+    }
+
+    &__information {
+      flex: 1;
+    }
+
+    &__image {
+      flex: 1;
+      height: 100%;
+      width: 100%;
+      max-width: 500px;
+      max-height: 400px;
+      background-size: cover;
+      transform: perspective(650px) rotateZ(-5deg) rotateX(2.5deg)
+        rotateY(15deg) scale(0.8) translateX(-30px);
+      box-shadow: -30px 30px 50px transparentize(darken($brand-color, 50%), 0.9);
+    }
+
+    margin-right: auto;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+}
+
+.snipcart-add-item {
+  -webkit-appearance: none;
+  color: #222;
+  text-decoration: none;
+  border: 0;
+  background: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 10px 15px 15px;
+  float: right;
+  cursor: pointer;
+  line-height: 1;
+  margin-top: 10px;
+
+  &:hover {
+    background: #f5f5f5;
+    color: #000;
   }
 }
