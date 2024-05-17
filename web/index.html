@@ -113,3 +113,20 @@ description: Bienvenidos a nuestra web!
     </div>
   </section>
 </div>
+<script src="https://mnmxmx.github.io/fluid-three/dist/fluid-three.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const heroSection = document.getElementById("fluid-hero");
+
+    const fluidEffect = new FluidThree();
+    fluidEffect.init();
+
+    // Añade el efecto fluido al movimiento del ratón dentro de la sección .hero
+    heroSection.addEventListener("mousemove", function (event) {
+      const rect = heroSection.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      fluidEffect.onMouseMove(x, y);
+    });
+  });
+</script>
