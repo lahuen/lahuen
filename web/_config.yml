@@ -1,14 +1,11 @@
 # ----
 # Site
-
 title: Lahuen
 url: "https://www.lahuen.ar/"
 baseurl: "https://www.lahuen.ar"
 google_analytics_key: GTM-WQDZCT8S
 google_maps_javascript_api_key: AIzaSyBnvkEitlBRFs1yXU2QGtXJrxka4FTRnSQ
 disqus_shortname: lahuen
-snipcart_key: "Y2M3ZjRlODMtMTc3MC00ZWIyLWI4YTYtZWI1YjAxNzY5YTg5NjM4NTE0NTkyNzM1ODA5NzEx"
-snipcart_currency: "usd"
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /images/logo.png
