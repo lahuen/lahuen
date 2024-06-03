@@ -1,7 +1,5 @@
 ---
-title: Lahuen tienda
-hero: Lahuen tienda
-subtitle: Si sos usuario u ONG registrado/a en REPROCANN podés adquirir tu esqueje o plantin legal, contratar nuestros servicios de fitomejoramiento o adquirir nuestros biofertilizantes para sacarle mayor rendimiento a tu cultivo.
+title: Nuestros productos
 ---
 
 <div class="content" id="products">
@@ -11,13 +9,12 @@ subtitle: Si sos usuario u ONG registrado/a en REPROCANN podés adquirir tu esqu
       plantin legal, contratar nuestros servicios de fitomejoramiento o adquirir
       nuestros biofertilizantes para sacarle mayor rendimiento a tu cultivo.
     </p>
+    <div></div>
+    <p>
+      Escribinos y presupuestamos todo lo necesario para hacer realidad tus
+      proyectos!
+    </p>
     <div class="container">
-      <div class="about">
-        Con el fin de mantener un precio a lo largo del tiempo elegimos utilizar
-        precio en USD como referencia, tomando la cotización de la fecha de
-        operación. Sobre la venta por mayor, consideramos mayorista a partir de
-        5 unidades del mismo producto. Consultanos los precios x Mayor!
-      </div>
       <ul class="product-list">
         {% for product in site.products %}
         <li>
@@ -26,10 +23,6 @@ subtitle: Si sos usuario u ONG registrado/a en REPROCANN podés adquirir tu esqu
             <h4><a href="{{ product.url }}">{{ product.name }}</a></h4>
             <div class="product-description">
               {{ product.description_markdown | truncate: 38 | markdownify }}
-            </div>
-            <p>USD {{ product.price }}</p>
-            <div class="button">
-              {% include snipcart-button.html product=page %}
             </div>
           </div>
         </li>
