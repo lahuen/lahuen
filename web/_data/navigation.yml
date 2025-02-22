@@ -2,6 +2,10 @@
 #  link: /app/
 #  new_window: false
 #  highlight: false
+- name: Encuesta
+  link: /encuesta/
+  new_window: false
+  highlight: false
 - name: Blog
   link: /blog/
   new_window: false
