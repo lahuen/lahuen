@@ -31,6 +31,9 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          name: github-pages  # Asegúrate de que el nombre del artefacto sea correcto
+          path: ./_site       # Asegúrate de que la ruta del artefacto sea correcta
 
   deploy:
     environment:
