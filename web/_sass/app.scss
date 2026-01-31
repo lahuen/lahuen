@@ -8,9 +8,18 @@
 		padding: 0;
 		margin: 0 10px 50px 10px;
 		text-align: center;
-		border: 1px solid #eee;
-		border-radius: 5px;
-		box-shadow: 0px 0px 10px #eee;
+		border: none;
+		border-radius: 24px;
+		background: #fff;
+		box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+		overflow: hidden;
+
+		&:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+		}
+
 		width: 100%;
 
 		.highlighted {
@@ -38,6 +47,7 @@
 			border-top-right-radius: 5px;
 			border-top-left-radius: 5px;
 			padding: 20px 0;
+
 			h3 {
 				padding: 0;
 				margin: 0;
@@ -52,7 +62,9 @@
 	@media #{$desktop} {
 		@include columns(2);
 	}
+
 	color: #666;
+
 	div {
 		break-inside: avoid;
 		padding: 25px 0;

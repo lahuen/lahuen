@@ -15,11 +15,13 @@
 		@media #{$tablet} {
 			max-width: 150px;
 		}
+
 		a {
 
 			&:hover {
 				text-decoration: none;
 			}
+
 			svg {
 				fill: #999;
 				margin-right: 10px;
@@ -39,14 +41,6 @@
 				fill: #55acee;
 			}
 
-			&.google-plus-icon:hover svg {
-				fill: #db4437;
-			}
-
-			&.youtube-icon:hover svg {
-				fill: #cd201f;
-			}
-
 			&.instagram-icon:hover svg {
 				fill: #f167f5;
 			}
@@ -55,43 +49,42 @@
 				fill: #0077b5;
 			}
 
-			&.pinterest-icon:hover svg {
-				fill: #bd081c;
-			}
-
-			&.rss-icon:hover svg {
-				fill: #f26522;
+			&.facebook-icon:hover svg {
+				fill: #3b5998;
 			}
 		}
 	}
 }
 
 footer {
-	padding: 50px 0 50px 0;
+	padding: 80px 0 50px 0;
 	font-size: 1.1em;
 	position: relative;
-	background: #2b2b40;
+	background: #4a7c9d;
+	/* Lighter "celeste azul claro" */
 	color: #fff;
 
 	.copyright {
-		font-size: .8em;
-		margin: 0 auto;
-		
+		font-size: .85em;
+		margin: 40px auto 0 auto;
+		opacity: 0.9;
+
 		@media #{$tablet} {
 			text-align: center;
 		}
 
 	}
-	
+
 	&,
 	a {
-		color: #999;
+		color: rgba(255, 255, 255, 0.9);
 	}
 
 	h2 {
 		font-size: 1.4em;
 		margin: 30px 0;
-		color: #ccc;
+		color: #fff;
+		font-weight: 700;
 	}
 
 	.footer-columns {
@@ -102,20 +95,11 @@ footer {
 
 	a {
 		text-decoration: none;
+		transition: all 0.3s ease;
 
 		&:hover {
 			color: #fff;
-		}
-	}
-
-	.legal-line {
-		width: 100%;
-		padding: 30px 0;
-		margin: 0;
-		background-color: #222527;
-
-		a {
-			font-weight: 600;
+			transform: translateX(3px);
 		}
 	}
 }

@@ -1,7 +1,7 @@
 ---
-name: Fefox
-position: Grower
-image_path: https://i.imgur.com/aWXXPie.jpeg
+name: Federico
+position: Grower & Técnico Hidropónico
+image_path: /images/staff/federico.jpg
 link: "#"
-blurb: Experto en cultivo.
+blurb: Especialista en sistemas de cultivo hidropónico y manejo de invernaderos.
 ---

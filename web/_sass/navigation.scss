@@ -1,6 +1,7 @@
 .nav-open nav {
 	border-bottom: 1px dotted rgba(255, 255, 255, .2);
 	padding: 10px 0;
+
 	a {
 		display: block;
 	}
@@ -13,6 +14,11 @@
 			display: inline;
 		}
 	}
+}
+
+.content section:nth-child(even) {
+	background-color: #f6f9fb;
+	/* Organic layering */
 }
 
 nav {
@@ -32,9 +38,9 @@ nav {
 	a {
 		margin: 0 3px;
 		padding: 20px 10px;
-		border-bottom: 1px solid rgba(255,255,255,0);
-		color: rgba(255,255,255,.8);
-		transition: .2s ease-in-out;
+		border-bottom: 2px solid transparent;
+		color: rgba(255, 255, 255, .8);
+		transition: all 0.3s ease;
 		display: none;
 
 		@media #{$mid-point} {
@@ -62,25 +68,33 @@ nav {
 	}
 
 	a:hover {
-
-		border-bottom: 1px solid rgba(255,255,255,.3);
 		color: #fff;
+		border-bottom-color: rgba(255, 255, 255, 0.4);
 	}
 
 	@media #{$mid-point} {
 		a.highlight {
-			border: 1px #ccc solid;
-			border-radius: 5px;
+			border: 1px solid rgba(255, 255, 255, 0.6);
+			background: rgba(255, 255, 255, 0.1);
+			color: #fff;
+			border-radius: 8px;
+			padding: 8px 18px;
+			backdrop-filter: blur(4px);
+			font-weight: 700;
 
 			&:hover {
 				background: #fff;
 				color: $brand-color;
+				transform: translateY(-1px);
+				box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+				border-bottom-color: transparent;
 			}
 		}
 	}
 
 	a.active {
 		color: #fff;
+		border-bottom-color: #fff;
 	}
 
 }
