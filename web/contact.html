@@ -1,204 +1,224 @@
 ---
 title: Contacto
 heading: Formulario de contacto
-description: ¿Necesitas ayuda en algo? Comentanos a través del formulario a continuación y nos pondremos en contacto contigo lo antes posible.
+description: ¿Necesitas ayuda en algo? Comentanos a través del formulario a continuación y nos pondremos en contacto
+contigo lo antes posible.
 
 map:
-  latitude: -34.6506
-  longitude: -58.7897
-  address: "Moreno, Buenos Aires, Argentina"
-  zoom: 13
+latitude: -34.6506
+longitude: -58.7897
+address: "Moreno, Buenos Aires, Argentina"
+zoom: 13
 ---
 
 <div class="contact-box">
-  <form
-    action="https://formspree.io/f/xjvqzeen"
-    method="POST"
-    class="contact-form"
-  >
-    <input type="hidden" name="_next" value="https://lahuen.ar" />
+	<form id="contact-form" action="https://formspree.io/f/xjvqzeen" method="POST" class="contact-form">
+		<input type="hidden" name="_next" value="https://www.lahuen.ar/" />
+		<input type="text" name="_gotcha" style="display:none" />
 
-    <label for="name">Nombre completo</label>
-    <input
-      type="text"
-      name="name"
-      id="name"
-      placeholder="Ingresa tu nombre..."
-    />
+		<label for="name">Nombre completo</label>
+		<input type="text" name="name" id="name" placeholder="Ingresa tu nombre..." required />
 
-    <label for="email">Email</label>
-    <input
-      type="email"
-      name="email"
-      id="email"
-      placeholder="Ingresa tu mail..."
-      required
-    />
+		<label for="email">Email</label>
+		<input type="email" name="email" id="email" placeholder="Ingresa tu mail..." required />
 
-    <label for="message">Mensaje</label>
-    <textarea
-      name="message"
-      id="message"
-      placeholder="Tu mensaje va aqui..."
-    ></textarea>
+		<label for="message">Mensaje</label>
+		<textarea name="message" id="message" placeholder="Tu mensaje va aqui..." required></textarea>
 
-    <input type="submit" value="Enviar" />
-  </form>
+		<input type="submit" id="submit-btn" value="Enviar" />
+	</form>
 
-  <div class="contact-details">
-    <h3 class="editable">Donde estamos</h3>
-    <address>
-      <a
-        target="_blank"
-        href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}"
-        >{{ page.map.address | replace: ", ", ", <br />" }}</a
-      >
-    </address>
+	<div class="contact-details">
+		<h3 class="editable">Donde estamos</h3>
+		<address>
+			<a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{
+				page.map.address | replace: ", ", ", <br />" }}</a>
+		</address>
 
-    <h3 class="editable">Email</h3>
-    <p><a href="mailto:info@lahuen.ar">info@lahuen.ar</a></p>
-  </div>
+		<h3 class="editable">Email</h3>
+		<p><a href="mailto:info@lahuen.ar">info@lahuen.ar</a></p>
+	</div>
 </div>
 
-<script type="text/javascript">
-  window.mapData = {{ page.map | jsonify }};
+<script>
+	const contactForm = document.getElementById('contact-form');
+	const submitBtn = document.getElementById('submit-btn');
 
-  function initMap() {
-  	var myOptions = {
-  		scrollwheel: false,
-  		draggable: true,
-  		panControl: false,
-  		disableDefaultUI: true,
-  		styles: [{
-  			"featureType": "all",
-  			"elementType": "labels.text.fill",
-  			"stylers": [{
-  				"saturation": 36
-  			}, {
-  				"color": "#000000"
-  			}, {
-  				"lightness": 40
-  			}]
-  		}, {
-  			"featureType": "all",
-  			"elementType": "labels.text.stroke",
-  			"stylers": [{
-  				"visibility": "on"
-  			}, {
-  				"color": "#000000"
-  			}, {
-  				"lightness": 16
-  			}]
-  		}, {
-  			"featureType": "all",
-  			"elementType": "labels.icon",
-  			"stylers": [{
-  				"visibility": "off"
-  			}]
-  		}, {
-  			"featureType": "administrative",
-  			"elementType": "geometry.fill",
-  			"stylers": [{
-  				"color": "#000000"
-  			}, {
-  				"lightness": 20
-  			}]
-  		}, {
-  			"featureType": "administrative",
-  			"elementType": "geometry.stroke",
-  			"stylers": [{
-  				"color": "#000000"
-  			}, {
-  				"lightness": 17
-  			}, {
-  				"weight": 1.2
-  			}]
-  		}, {
-  			"featureType": "landscape",
-  			"elementType": "geometry",
-  			"stylers": [{
-  				"color": "#000000"
-  			}, {
-  				"lightness": 20
-  			}]
-  		}, {
-  			"featureType": "poi",
-  			"elementType": "geometry",
-  			"stylers": [{
-  				"color": "#000000"
-  			}, {
-  				"lightness": 21
-  			}]
-  		}, {
-  			"featureType": "road.highway",
-  			"elementType": "geometry.fill",
-  			"stylers": [{
-  				"color": "#000000"
-  			}, {
-  				"lightness": 17
-  			}]
-  		}, {
-  			"featureType": "road.highway",
-  			"elementType": "geometry.stroke",
-  			"stylers": [{
-  				"color": "#000000"
-  			}, {
-  				"lightness": 29
-  			}, {
-  				"weight": 0.2
-  			}]
-  		}, {
-  			"featureType": "road.arterial",
-  			"elementType": "geometry",
-  			"stylers": [{
-  				"color": "#000000"
-  			}, {
-  				"lightness": 18
-  			}]
-  		}, {
-  			"featureType": "road.local",
-  			"elementType": "geometry",
-  			"stylers": [{
-  				"color": "#000000"
-  			}, {
-  				"lightness": 16
-  			}]
-  		}, {
-  			"featureType": "transit",
-  			"elementType": "geometry",
-  			"stylers": [{
-  				"color": "#000000"
-  			}, {
-  				"lightness": 19
-  			}]
-  		}, {
-  			"featureType": "water",
-  			"elementType": "geometry",
-  			"stylers": [{
-  				"color": "#000000"
-  			}, {
-  				"lightness": 17
-  			}]
-  		}],
-  		zoom: window.mapData.zoom,
-  		maxZoom: window.mapData.zoom,
-  		minZoom: window.mapData.zoom,
-  		center: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude),
-  		mapTypeId: google.maps.MapTypeId.ROADMAP
-  	};
-  	map = new google.maps.Map(document.getElementById("map"), myOptions);
-  	marker = new google.maps.Marker({
-  		map: map,
-  		position: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude)
-  	});
+	if (contactForm) {
+		contactForm.addEventListener('submit', async (e) => {
+			e.preventDefault();
 
-  	google.maps.event.addDomListener(window, "resize", function () {
-  		map.setCenter(myOptions.center);
-  	});
-  }
+			const formData = new FormData(contactForm);
+			submitBtn.value = "Enviando...";
+			submitBtn.disabled = true;
+
+			try {
+				const response = await fetch(contactForm.action, {
+					method: 'POST',
+					body: formData,
+					headers: {
+						'Accept': 'application/json'
+					}
+				});
+
+				if (response.ok) {
+					// Redirigir al index después del éxito
+					window.location.href = "{{ site.baseurl }}/";
+				} else {
+					const data = await response.json();
+					if (Object.hasOwn(data, 'errors')) {
+						alert(data["errors"].map(error => error["message"]).join(", "));
+					} else {
+						alert("Oops! Hubo un problema al enviar el formulario.");
+					}
+					submitBtn.value = "Enviar";
+					submitBtn.disabled = false;
+				}
+			} catch (error) {
+				alert("Oops! Hubo un problema de conexión al enviar el formulario.");
+				submitBtn.value = "Enviar";
+				submitBtn.disabled = false;
+			}
+		});
+	}
 </script>
-<script
-  async
-  defer
-  src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"
-></script>
+
+<script type="text/javascript">
+	window.mapData = {{ page.map | jsonify }};
+
+	function initMap() {
+		var myOptions = {
+			scrollwheel: false,
+			draggable: true,
+			panControl: false,
+			disableDefaultUI: true,
+			styles: [{
+				"featureType": "all",
+				"elementType": "labels.text.fill",
+				"stylers": [{
+					"saturation": 36
+				}, {
+					"color": "#000000"
+				}, {
+					"lightness": 40
+				}]
+			}, {
+				"featureType": "all",
+				"elementType": "labels.text.stroke",
+				"stylers": [{
+					"visibility": "on"
+				}, {
+					"color": "#000000"
+				}, {
+					"lightness": 16
+				}]
+			}, {
+				"featureType": "all",
+				"elementType": "labels.icon",
+				"stylers": [{
+					"visibility": "off"
+				}]
+			}, {
+				"featureType": "administrative",
+				"elementType": "geometry.fill",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 20
+				}]
+			}, {
+				"featureType": "administrative",
+				"elementType": "geometry.stroke",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 17
+				}, {
+					"weight": 1.2
+				}]
+			}, {
+				"featureType": "landscape",
+				"elementType": "geometry",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 20
+				}]
+			}, {
+				"featureType": "poi",
+				"elementType": "geometry",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 21
+				}]
+			}, {
+				"featureType": "road.highway",
+				"elementType": "geometry.fill",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 17
+				}]
+			}, {
+				"featureType": "road.highway",
+				"elementType": "geometry.stroke",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 29
+				}, {
+					"weight": 0.2
+				}]
+			}, {
+				"featureType": "road.arterial",
+				"elementType": "geometry",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 18
+				}]
+			}, {
+				"featureType": "road.local",
+				"elementType": "geometry",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 16
+				}]
+			}, {
+				"featureType": "transit",
+				"elementType": "geometry",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 19
+				}]
+			}, {
+				"featureType": "water",
+				"elementType": "geometry",
+				"stylers": [{
+					"color": "#000000"
+				}, {
+					"lightness": 17
+				}]
+			}],
+			zoom: window.mapData.zoom,
+			maxZoom: window.mapData.zoom,
+			minZoom: window.mapData.zoom,
+			center: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude),
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		map = new google.maps.Map(document.getElementById("map"), myOptions);
+		marker = new google.maps.Marker({
+			map: map,
+			position: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude)
+		});
+
+		google.maps.event.addDomListener(window, "resize", function () {
+			map.setCenter(myOptions.center);
+		});
+	}
+</script>
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>

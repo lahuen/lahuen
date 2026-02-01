@@ -33,8 +33,10 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-web/.DS_Store
+web/_config.local.yml
+.env
 .DS_Store
+web/.DS_Store
 web/.jekyll-cache/
 web/.jekyll-cache/Jekyll/Cache/
 web/vendor/bundle

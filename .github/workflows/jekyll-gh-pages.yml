@@ -24,6 +24,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Inject Secrets
+        run: |
+          sed -i "s/GOOGLE_ANALYTICS_KEY_PLACEHOLDER/${{ secrets.GOOGLE_ANALYTICS_KEY }}/g" web/_config.yml
+          sed -i "s/GOOGLE_MAPS_KEY_PLACEHOLDER/${{ secrets.GOOGLE_MAPS_JAVASCRIPT_API_KEY }}/g" web/_config.yml
       - name: Build
         uses: actions/jekyll-build-pages@v1
         with:
