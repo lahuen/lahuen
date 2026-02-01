@@ -28,6 +28,8 @@ jobs:
         run: |
           sed -i "s/GOOGLE_ANALYTICS_KEY_PLACEHOLDER/${{ secrets.GOOGLE_ANALYTICS_KEY }}/g" web/_config.yml
           sed -i "s/GOOGLE_MAPS_KEY_PLACEHOLDER/${{ secrets.GOOGLE_MAPS_JAVASCRIPT_API_KEY }}/g" web/_config.yml
+          sed -i "s|BOTPRESS_INJECT_URL_PLACEHOLDER|${{ secrets.BOTPRESS_INJECT_URL }}|g" web/_config.yml
+          sed -i "s|BOTPRESS_CONFIG_URL_PLACEHOLDER|${{ secrets.BOTPRESS_CONFIG_URL }}|g" web/_config.yml
       - name: Build
         uses: actions/jekyll-build-pages@v1
         with:

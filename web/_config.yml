@@ -5,6 +5,8 @@ url: "https://www.lahuen.ar"
 baseurl: ""
 google_analytics_key: GOOGLE_ANALYTICS_KEY_PLACEHOLDER
 google_maps_javascript_api_key: GOOGLE_MAPS_KEY_PLACEHOLDER
+botpress_inject_url: BOTPRESS_INJECT_URL_PLACEHOLDER
+botpress_config_url: BOTPRESS_CONFIG_URL_PLACEHOLDER
 disqus_shortname: lahuen
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
