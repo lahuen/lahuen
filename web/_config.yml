@@ -1,8 +1,8 @@
 # ----
 # Site
 title: Lahuen
-url: "https://www.lahuen.ar/"
-baseurl: "https://www.lahuen.ar"
+url: "https://www.lahuen.ar"
+baseurl: ""
 google_analytics_key: GOOGLE_ANALYTICS_KEY_PLACEHOLDER
 google_maps_javascript_api_key: GOOGLE_MAPS_KEY_PLACEHOLDER
 disqus_shortname: lahuen

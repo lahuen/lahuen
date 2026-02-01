@@ -2,5 +2,14 @@
 title: Contact Success
 ---
 
-<h2>Success</h2>
-<p class="subtext">Your message is sent. We'll be in touch soon.</p>
+<div class="container" style="text-align: center; padding: 100px 0;">
+  <h2>¡Mensaje Enviado!</h2>
+  <p class="subtext">Gracias por contactarte. Te responderemos lo antes posible.</p>
+  <p>Serás redirigido al inicio en unos segundos...</p>
+</div>
+
+<script>
+  setTimeout(function () {
+    window.location.href = "{{ site.baseurl }}/";
+  }, 3000);
+</script>
