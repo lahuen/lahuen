@@ -45,3 +45,5 @@ web/_site
 web/*.gem
 web/*.rbc
 web/.bundle/
+
+.claude/
