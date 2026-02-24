@@ -79,17 +79,7 @@
   }
 }
 
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
 
-.whatsapp-icon {
-  width: 50px;
-  height: auto;
-}
 
 @media #{$desktop} {
   .flex {
@@ -151,22 +141,4 @@
   &:hover {
     transform: scale(1.015);
   }
-}
-
-@keyframes floatAnimation {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.whatsapp-float.animated {
-  animation: floatAnimation 2s ease-in-out infinite;
 }
