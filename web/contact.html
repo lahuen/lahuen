@@ -30,6 +30,9 @@ zoom: 15
 
 	<div class="contact-details">
 		<h3 class="editable">Donde estamos</h3>
+		<div class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.3036807095896!2d-58.83887792383706!3d-34.57118175578142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc910079339225%3A0x7c7ebc75100956d3!2sIMDEL!5e0!3m2!1ses!2sar!4v1772018379372!5m2!1ses!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
 		<address>
 			<a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{
 				page.map.address | replace: ", ", ", <br />" }}</a>
@@ -38,8 +41,4 @@ zoom: 15
 		<h3 class="editable">Email</h3>
 		<p><a href="mailto:info@lahuen.ar">info@lahuen.ar</a></p>
 	</div>
-</div>
-
-<div class="map">
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.3036807095896!2d-58.83887792383706!3d-34.57118175578142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc910079339225%3A0x7c7ebc75100956d3!2sIMDEL!5e0!3m2!1ses!2sar!4v1772018379372!5m2!1ses!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
