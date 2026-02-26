@@ -1,10 +1,9 @@
 .styles {
   width: 100%;
-  background: #eee;
   position: relative;
-  padding: 20px;
   box-sizing: border-box;
   border-radius: $radius-md;
+  overflow: hidden;
 
   .style-picker {
     z-index: 2;
@@ -30,7 +29,9 @@
   }
 
   img {
-    mix-blend-mode: multiply;
+    width: 100%;
+    display: block;
+    object-fit: cover;
   }
 
   i {
