@@ -1,17 +1,23 @@
-.nav-open nav {
-	border-bottom: 1px dotted rgba(255, 255, 255, .2);
-	padding: 10px 0;
-
-	a {
-		display: block;
+.nav-open {
+	header {
+		background: $dark-green;
 	}
 
-	@media #{$mid-point} {
-		border: 0;
-		padding: 0 20px;
+	nav {
+		border-bottom: 1px dotted rgba(255, 255, 255, .2);
+		padding: 10px 0;
 
 		a {
-			display: inline;
+			display: block;
+		}
+
+		@media #{$mid-point} {
+			border: 0;
+			padding: 0 20px;
+
+			a {
+				display: inline;
+			}
 		}
 	}
 }
