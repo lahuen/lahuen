@@ -1,6 +1,13 @@
-$brand-color: #8fbdd3;
-$secondary-brand-color: #e4d1b9;
+$brand-color: #4a8c3f;
+$secondary-brand-color: #d4c5a0;
+$dark-green: #2d4a28;
 $middle-gradient-color: mix($brand-color, $secondary-brand-color, 95%);
+
+// Border radius scale
+$radius-sm: 12px;
+$radius-md: 16px;
+$radius-lg: 20px;
+$radius-xl: 24px;
 
 // Breakpoints
 $tablet: "(min-width: 450px)";

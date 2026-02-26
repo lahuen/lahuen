@@ -1,7 +1,7 @@
 ---
 name: Max
-position: Data & Cloud Engineer
+position: Cloud & AI Engineer
 image_path: /images/staff/max.jpg
 link: "#"
-blurb: Technical Referent con experiencia en Cloud, Infra y Data.
+blurb: Facilitador e investigador en tecnología, infraestructura y soluciones digitales para la cooperativa.
 ---

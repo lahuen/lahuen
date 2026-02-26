@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <defs>
+    <filter id="sketchy-mx">
+      <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="3" result="noise" seed="25"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#sketchy-mx)">
+    <!-- Stems bundled together -->
+    <path d="M118,172 C118,160 116,146 116,132 C116,120 118,110 120,100" stroke="#3a6b35" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M138,172 C136,158 136,142 136,126 C136,112 138,100 140,88" stroke="#3a6b35" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <path d="M155,172 C156,156 154,138 154,120 C154,106 156,92 158,80" stroke="#3a6b35" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M172,172 C174,160 176,146 176,132 C176,120 174,108 174,98" stroke="#3a6b35" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M186,172 C188,162 188,148 186,134 C184,122 184,112 186,104" stroke="#3a6b35" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <!-- Twine/ribbon tie around the bundle -->
+    <path d="M108,148 C112,144 124,140 144,138 C160,137 176,138 192,142" stroke="#c4a060" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M108,152 C114,148 126,144 144,142 C162,141 178,142 192,146" stroke="#c4a060" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <!-- Twine knot/bow -->
+    <path d="M148,138 C142,132 138,126 142,124 C146,122 150,126 150,130" stroke="#c4a060" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M152,138 C158,132 162,126 158,124 C154,122 150,126 150,130" stroke="#c4a060" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <!-- Basil-like leaves (left side) -->
+    <path d="M120,100 C116,96 108,88 102,82 C98,78 96,74 100,72 C104,70 108,74 112,78 C118,84 120,92 120,100Z" fill="#3d8035" stroke="#2e6628" stroke-width="1" stroke-linecap="round"/>
+    <path d="M120,100 C122,96 126,86 128,78 C130,72 128,68 124,68 C120,68 118,72 118,78 C118,86 120,94 120,100Z" fill="#458c3a" stroke="#2e6628" stroke-width="1" stroke-linecap="round"/>
+    <!-- Basil vein -->
+    <path d="M120,98 L106,80" stroke="#2e6628" stroke-width="0.4" fill="none" opacity="0.3"/>
+    <!-- Parsley trifoliate (center-left) -->
+    <path d="M140,88 C136,84 130,78 126,76 C122,74 120,76 122,80 C124,82 128,84 132,86 C136,88 140,88 140,88Z" fill="#4a8c3f" stroke="#38702e" stroke-width="0.9" stroke-linecap="round"/>
+    <path d="M140,88 C138,84 136,76 134,70 C132,66 134,64 138,64 C140,66 140,70 140,76 C140,82 140,86 140,88Z" fill="#509642" stroke="#38702e" stroke-width="0.9" stroke-linecap="round"/>
+    <path d="M140,88 C144,84 150,78 154,76 C158,74 160,76 158,80 C156,82 152,84 148,86 C144,88 140,88 140,88Z" fill="#4c9040" stroke="#38702e" stroke-width="0.9" stroke-linecap="round"/>
+    <!-- Arugula-like leaf (center) -->
+    <path d="M158,80 C156,72 154,60 152,48 C150,42 152,38 156,40 C158,44 158,52 158,60 C154,54 152,54 154,58 C158,60 160,58 160,54 C162,58 162,66 160,72 C158,76 158,78 158,80Z" fill="#56a046" stroke="#408234" stroke-width="0.9" stroke-linecap="round"/>
+    <!-- Chive stalks (right side) -->
+    <path d="M174,98 C174,86 172,72 174,58 C176,46 176,38 178,30" stroke="#4a8c3f" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M186,104 C186,92 184,78 186,64 C188,52 188,42 190,34" stroke="#509540" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <!-- Small chive flower -->
+    <path d="M178,30 C176,26 174,22 176,18 C178,16 180,16 182,18 C184,16 184,20 182,24 C182,28 178,30 178,30Z" fill="#b480c4" stroke="#8a5e98" stroke-width="0.8" stroke-linecap="round" opacity="0.8"/>
+    <!-- Extra small herb leaf (right) -->
+    <path d="M176,98 C180,94 186,88 190,84 C194,80 194,78 190,78 C186,78 182,82 180,88 C178,92 176,96 176,98Z" fill="#5aaa4a" stroke="#408234" stroke-width="0.8" stroke-linecap="round" opacity="0.8"/>
+  </g>
+</svg>

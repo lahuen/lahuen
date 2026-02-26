@@ -10,8 +10,8 @@ botpress_config_url: BOTPRESS_CONFIG_URL_PLACEHOLDER
 disqus_shortname: lahuen
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /images/logo.png
-description: Cooperativa de Trabajo LTDA dedicada a la hidroponía sustentable en Moreno.
+logo: /images/logo.svg
+description: Cooperativa de producción hidropónica en Moreno. Hojas verdes, aromáticas y flores comestibles sin agroquímicos, con raíz viva. Proveemos a familias, gastronomía y comercios.
 author:
   name: Lahuen
   email: info@lahuen.ar

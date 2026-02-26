@@ -3,8 +3,12 @@
 #  new_window: false
 #  highlight: false
 
-- name: Blog
-  link: /blog/
+- name: Productos
+  link: /products/
+  new_window: false
+  highlight: false
+- name: Cómo funciona
+  link: /como-funciona/
   new_window: false
   highlight: false
 - name: Nosotros
@@ -14,11 +18,7 @@
 - name: Contacto
   link: /contact/
   new_window: false
-  highlight: false
-- name: Productos
-  link: /tienda/
-  new_window: false
-  highlight: false
+  highlight: true
 #- name: Login
 #  link: /
 #  new_window: false

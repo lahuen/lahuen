@@ -1,27 +1,13 @@
 - links:
-  #- name: APP
-  #  link: /app/
-  - name: Blog
-    link: /blog/
+  - name: Productos
+    link: /products/
+  - name: Cómo funciona
+    link: /como-funciona/
   - name: Nosotros
     link: /about/
   - name: Contacto
     link: /contact/
-  - name: Productos
-    link: /products/
 - links:
-  #- name: Login
-  #  link: /
-  #  new_window: false
-  #- name: Sign Up
-  #  link: /
-  #  new_window: false
-  #- name: Docs
-  #  link: /
-  #  new_window: false
-  #- name: Status
-  #  link: /
-  #  new_window: false
 - links:
   - name: Instagram
     link: https://www.instagram.com/lahuen.ar

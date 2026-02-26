@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <defs>
+    <filter id="sketchy-ch">
+      <feTurbulence type="turbulence" baseFrequency="0.025" numOctaves="3" result="noise" seed="30"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#sketchy-ch)">
+    <!-- Chive stalks - thin, tall, slightly wobbly hand-drawn lines -->
+    <path d="M120,180 C119,164 118,144 116,124 C114,104 113,84 115,64 C116,52 118,42 119,34" stroke="#4a8c3f" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+    <path d="M134,180 C133,162 133,140 132,120 C131,100 130,80 132,60 C133,48 134,38 136,30" stroke="#56a046" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M148,180 C149,160 148,136 147,114 C146,92 148,72 149,54 C150,42 150,32 151,24" stroke="#4e9842" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+    <path d="M162,180 C161,164 163,142 162,122 C161,102 160,82 162,62 C163,50 165,40 166,32" stroke="#509640" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M176,180 C177,166 175,146 176,126 C177,106 178,86 177,66 C176,54 175,44 176,36" stroke="#448838" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <!-- Thinner background stalks -->
+    <path d="M126,180 C125,166 126,148 125,128 C124,108 126,88 127,70 C128,58 128,48 129,40" stroke="#5aaa4a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M156,180 C157,168 155,148 156,130 C157,112 156,92 157,74 C158,62 158,50 159,42" stroke="#52a244" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M141,180 C140,166 142,148 141,130 C140,112 141,92 142,74 C142,62 143,52 143,44" stroke="#4c9640" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M168,180 C169,168 167,150 168,132 C169,114 170,94 169,76 C168,64 168,54 168,44" stroke="#489040" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <!-- Purple flower buds at the top of some stalks -->
+    <!-- Flower 1 - round pom-pom shape -->
+    <path d="M119,34 C116,30 112,26 114,20 C116,16 120,14 124,16 C128,14 130,18 128,22 C130,26 126,30 122,32 C120,34 119,34 119,34Z" fill="#b480c4" stroke="#8a5e98" stroke-width="1" stroke-linecap="round"/>
+    <path d="M116,26 C118,22 122,20 126,22" stroke="#9a6aaa" stroke-width="0.6" fill="none" opacity="0.4"/>
+    <circle cx="120" cy="24" r="2" fill="#c8a0d4" opacity="0.5"/>
+    <!-- Flower 2 -->
+    <path d="M151,24 C148,20 144,16 146,10 C148,6 152,4 156,6 C160,4 162,8 160,12 C162,16 158,20 154,22 C152,24 151,24 151,24Z" fill="#c090d0" stroke="#9468a4" stroke-width="1" stroke-linecap="round"/>
+    <path d="M148,16 C150,12 154,10 158,12" stroke="#a676b6" stroke-width="0.6" fill="none" opacity="0.4"/>
+    <circle cx="152" cy="14" r="2" fill="#d4b0e0" opacity="0.5"/>
+    <!-- Flower 3 - smaller bud -->
+    <path d="M166,32 C164,28 162,24 164,20 C166,18 168,18 170,20 C172,18 174,20 172,24 C174,28 170,30 168,32 C166,32 166,32 166,32Z" fill="#a878b8" stroke="#8a5e98" stroke-width="0.8" stroke-linecap="round" opacity="0.85"/>
+  </g>
+</svg>

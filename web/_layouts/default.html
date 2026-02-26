@@ -19,43 +19,29 @@
 
   {% seo %}
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css" />
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png" />
   {% feed_meta %}
 
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", "{{ site.google_analytics_key }}");
-  </script>
-  <!-- End Google Tag Manager <-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_analytics_key }}" height="0"
-      width="0" style="display: none; visibility: hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
   <header>
     <div class="container">
       <div class="company-name">
-        <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.png" alt="Hydra Logo" width="95"
-            height="33" /></a>
+        <a href="{{ site.baseurl }}/" aria-label="Lahuen - Inicio">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 50" width="140" height="47" role="img" aria-label="Lahuen">
+            <text x="6" y="37" font-family="'Alkatra', cursive, serif" font-weight="700" font-size="32" fill="#ffffff" letter-spacing="0.5">Lahuen</text>
+          </svg>
+        </a>
       </div>
       {% include navigation.html %}
     </div>
   </header>
+  <main>
   {{ content }}
+  </main>
   <footer>
     <div class="container">
       <p class="editor-link"></p>
@@ -74,16 +60,15 @@
         {% endfor %}
       </div>
       <p class="copyright">
-        &copy; {{ site.time | date: '%Y' }} Lahuen Cooperativa de trabajo LTDA
-        •
-        <a href="#">Terms</a> &amp; <a href="#">Privacy</a> •
-        <a href="https://www.lahuen.ar">Github Pages</a>
+        &copy; {{ site.time | date: '%Y' }} Lahuen Cooperativa de Trabajo LTDA
       </p>
     </div>
   </footer>
   <script>
     document.getElementById("open-nav").onclick = function () {
       document.body.classList.toggle("nav-open");
+      var expanded = this.getAttribute("aria-expanded") === "true";
+      this.setAttribute("aria-expanded", !expanded);
       return false;
     };
   </script>

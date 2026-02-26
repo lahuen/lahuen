@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <defs>
+    <filter id="sketchy-r">
+      <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="3" result="noise" seed="12"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#sketchy-r)">
+    <!-- Arugula - elongated serrated leaves radiating from center -->
+    <!-- Left far leaf -->
+    <path d="M118,148 C116,138 108,118 102,98 C98,86 92,72 88,58 C86,52 90,48 94,52 C98,58 100,66 102,74 C96,68 90,66 88,70 C92,74 98,76 104,78 C100,76 96,78 94,82 C98,84 104,82 108,80 C106,84 104,90 108,92 C110,88 112,82 114,78 C112,96 114,118 118,138 C118,142 118,146 118,148Z" fill="#4a8c3f" stroke="#38702e" stroke-width="1.1" stroke-linecap="round" opacity="0.85"/>
+    <!-- Left middle leaf -->
+    <path d="M134,148 C132,140 126,120 122,100 C118,84 114,68 112,52 C110,46 114,44 116,48 C118,54 120,64 120,72 C116,66 112,64 110,68 C114,72 118,74 122,74 C118,74 116,78 116,82 C120,82 124,78 126,76 C124,82 124,90 128,92 C128,86 130,80 132,76 C130,94 132,118 134,138 C134,142 134,146 134,148Z" fill="#56a046" stroke="#408234" stroke-width="1" stroke-linecap="round" opacity="0.9"/>
+    <!-- Center leaf -->
+    <path d="M150,148 C148,138 146,116 144,94 C142,78 140,60 140,44 C140,38 144,36 146,40 C148,48 148,58 148,68 C144,60 140,58 140,62 C144,66 148,70 150,70 C146,70 144,74 144,78 C148,78 152,76 154,74 C152,74 150,78 150,82 C154,82 156,76 158,72 C156,70 154,70 150,70 C154,70 156,66 156,62 C160,58 158,48 158,40 C160,36 162,38 162,44 C162,60 160,78 158,94 C156,116 154,138 152,148Z" fill="#5aaa4a" stroke="#448836" stroke-width="1.1" stroke-linecap="round"/>
+    <!-- Right middle leaf -->
+    <path d="M166,148 C168,140 174,120 178,100 C182,84 186,68 188,52 C190,46 186,44 184,48 C182,54 180,64 180,72 C184,66 188,64 190,68 C186,72 182,74 178,74 C182,74 184,78 184,82 C180,82 176,78 174,76 C176,82 176,90 172,92 C172,86 170,80 168,76 C170,94 168,118 166,138 C166,142 166,146 166,148Z" fill="#4e9842" stroke="#3c7a30" stroke-width="1" stroke-linecap="round" opacity="0.9"/>
+    <!-- Right far leaf -->
+    <path d="M182,148 C184,138 192,118 198,98 C202,86 208,72 212,58 C214,52 210,48 206,52 C202,58 200,66 198,74 C204,68 210,66 212,70 C208,74 202,76 196,78 C200,76 204,78 206,82 C202,84 196,82 192,80 C194,84 196,90 192,92 C190,88 188,82 186,78 C188,96 186,118 182,138 C182,142 182,146 182,148Z" fill="#448638" stroke="#34682a" stroke-width="1.1" stroke-linecap="round" opacity="0.85"/>
+    <!-- Stems converging at base -->
+    <path d="M118,148 Q136,156 150,158 Q164,156 182,148" stroke="#3a6b35" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M134,148 Q144,154 150,155 Q156,154 166,148" stroke="#3a6b35" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+  </g>
+</svg>

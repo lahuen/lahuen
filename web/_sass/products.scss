@@ -4,7 +4,7 @@
   position: relative;
   padding: 20px;
   box-sizing: border-box;
-  border-radius: 3px;
+  border-radius: $radius-md;
 
   .style-picker {
     z-index: 2;
@@ -20,7 +20,7 @@
       border: 1px solid #000;
       display: inline-block;
       margin: 0 5px 0 0;
-      border-radius: 20px;
+      border-radius: $radius-lg;
       cursor: pointer;
     }
   }
@@ -59,7 +59,7 @@
   form {
     border: 1px solid #444;
     padding: 20px;
-    border-radius: 2px;
+    border-radius: $radius-sm;
 
     label:first-child {
       margin-top: 0;

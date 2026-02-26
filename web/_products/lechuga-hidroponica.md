@@ -1,11 +1,11 @@
 ---
-name: Lechuga hidropónica
-description_markdown: Lechuga fresca cultivada en sistema hidropónico, sin tierra y sin pesticidas. Con nutrientes controlados para garantizar una cosecha limpia y saludable.
-
-garment_type:
-price: "0.00"
+name: Lechuga Mantecosa
+description_markdown: >-
+  Hojas sedosas de textura mantecosa, ideales para ensaladas frescas y sándwiches.
+  Cultivada en sistema hidropónico sin agroquímicos.
+  Se entrega con raíz viva para que dure más días en tu heladera.
+  Peso aproximado: 200-250g por planta.
 sku: H0001
-stock: 0
 styles:
   - image: ""
 ---

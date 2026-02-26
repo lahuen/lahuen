@@ -1,7 +1,7 @@
 ---
 name: Gabriel
-position: Industrial Automation Specialist
+position: Especialista en Automatización
 image_path: /images/staff/gabriel.png
 link: "#"
-blurb: Tecnico PLC con experiencia en la implementación y optimización de sistemas.
+blurb: Técnico PLC con experiencia en la implementación y optimización de sistemas de riego y clima.
 ---

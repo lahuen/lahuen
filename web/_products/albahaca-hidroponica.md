@@ -1,11 +1,11 @@
 ---
-name: Albahaca hidropónica
-description_markdown: Albahaca fresca cultivada en sistema hidropónico. Aroma intenso, hojas vigorosas, libre de pesticidas y cosechada sin intermediarios.
-
-garment_type:
-price: "0.00"
+name: Albahaca Genovesa
+description_markdown: >-
+  Albahaca de hojas grandes y aroma intenso, cultivada en sistema hidropónico.
+  Ideal para pastas, ensaladas caprese, pestos y pizzas.
+  Se entrega con raíz viva: ponela en un vaso con agua y seguí cortando hojas frescas durante días.
+  Peso aproximado: 50-80g por planta.
 sku: H0002
-stock: 0
 styles:
   - image: ""
 ---

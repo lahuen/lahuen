@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <defs>
+    <filter id="sketchy-p">
+      <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="3" result="noise" seed="15"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#sketchy-p)">
+    <!-- Stems - thin, slightly wobbly -->
+    <path d="M128,170 C126,158 122,140 120,124 C118,110 116,98 118,88" stroke="#3a6b35" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M150,170 C150,156 150,138 150,120 C150,106 150,92 150,78" stroke="#3a6b35" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M172,170 C174,158 178,140 180,124 C182,110 184,98 182,88" stroke="#3a6b35" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <!-- Left stem - trifoliate leaf cluster -->
+    <path d="M118,88 C114,84 106,78 100,76 C94,74 90,76 90,80 C90,84 94,88 100,90 C106,92 114,90 118,88Z" fill="#4a8c3f" stroke="#38702e" stroke-width="1" stroke-linecap="round"/>
+    <path d="M118,88 C116,82 112,72 110,66 C108,60 110,56 114,56 C118,56 120,60 120,66 C120,72 118,80 118,88Z" fill="#509642" stroke="#38702e" stroke-width="1" stroke-linecap="round"/>
+    <path d="M118,88 C122,84 130,78 136,76 C142,74 146,76 146,80 C146,84 142,88 136,90 C130,92 122,90 118,88Z" fill="#4c9040" stroke="#38702e" stroke-width="1" stroke-linecap="round"/>
+    <!-- Left leaf veins -->
+    <path d="M118,88 L100,82" stroke="#38702e" stroke-width="0.5" fill="none" opacity="0.3"/>
+    <path d="M118,88 L114,66" stroke="#38702e" stroke-width="0.5" fill="none" opacity="0.3"/>
+    <path d="M118,88 L136,82" stroke="#38702e" stroke-width="0.5" fill="none" opacity="0.3"/>
+    <!-- Center stem - trifoliate leaf cluster (slightly higher) -->
+    <path d="M150,78 C146,74 138,68 132,66 C126,64 122,66 122,70 C122,74 126,78 132,80 C138,82 146,80 150,78Z" fill="#56a046" stroke="#408234" stroke-width="1" stroke-linecap="round"/>
+    <path d="M150,78 C148,72 146,62 144,54 C142,48 144,44 148,44 C152,44 154,48 154,54 C154,62 152,72 150,78Z" fill="#5caa4c" stroke="#408234" stroke-width="1" stroke-linecap="round"/>
+    <path d="M150,78 C154,74 162,68 168,66 C174,64 178,66 178,70 C178,74 174,78 168,80 C162,82 154,80 150,78Z" fill="#52a044" stroke="#408234" stroke-width="1" stroke-linecap="round"/>
+    <!-- Center leaf veins -->
+    <path d="M150,78 L132,70" stroke="#408234" stroke-width="0.5" fill="none" opacity="0.3"/>
+    <path d="M150,78 L148,54" stroke="#408234" stroke-width="0.5" fill="none" opacity="0.3"/>
+    <path d="M150,78 L168,70" stroke="#408234" stroke-width="0.5" fill="none" opacity="0.3"/>
+    <!-- Right stem - trifoliate leaf cluster -->
+    <path d="M182,88 C178,84 170,78 164,76 C158,74 154,76 154,80 C154,84 158,88 164,90 C170,92 178,90 182,88Z" fill="#4e9440" stroke="#3a7832" stroke-width="1" stroke-linecap="round"/>
+    <path d="M182,88 C180,82 178,72 176,66 C174,60 176,56 180,56 C184,56 186,60 186,66 C186,72 184,80 182,88Z" fill="#549c44" stroke="#3a7832" stroke-width="1" stroke-linecap="round"/>
+    <path d="M182,88 C186,84 194,78 200,76 C206,74 210,76 210,80 C210,84 206,88 200,90 C194,92 186,90 182,88Z" fill="#4c8e3e" stroke="#3a7832" stroke-width="1" stroke-linecap="round"/>
+    <!-- Right leaf veins -->
+    <path d="M182,88 L164,82" stroke="#3a7832" stroke-width="0.5" fill="none" opacity="0.3"/>
+    <path d="M182,88 L180,66" stroke="#3a7832" stroke-width="0.5" fill="none" opacity="0.3"/>
+    <path d="M182,88 L200,82" stroke="#3a7832" stroke-width="0.5" fill="none" opacity="0.3"/>
+  </g>
+</svg>

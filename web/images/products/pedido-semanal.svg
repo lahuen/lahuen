@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <defs>
+    <filter id="sketchy-ps">
+      <feTurbulence type="turbulence" baseFrequency="0.025" numOctaves="3" result="noise" seed="40"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#sketchy-ps)">
+    <!-- Wooden crate - hand-drawn box shape -->
+    <!-- Crate back panel -->
+    <path d="M82,102 C84,100 100,98 150,97 C200,98 216,100 218,102 L218,158 C216,160 200,162 150,163 C100,162 84,160 82,158Z" fill="#d8c8a0" stroke="#b5a06a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Crate horizontal slats -->
+    <path d="M84,118 C100,116 130,115 150,115 C170,115 200,116 216,118" stroke="#c4b080" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="M84,136 C100,134 130,133 150,133 C170,133 200,134 216,136" stroke="#c4b080" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="M84,152 C100,150 130,149 150,149 C170,149 200,150 216,152" stroke="#c4b080" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <!-- Crate front rim -->
+    <path d="M80,100 C82,96 100,94 150,93 C200,94 218,96 220,100 C218,104 200,106 150,107 C100,106 82,104 80,100Z" fill="#e0d0a8" stroke="#b5a06a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Wood grain lines on front rim -->
+    <path d="M100,98 C120,97 140,97 160,98" stroke="#c8b888" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M110,102 C130,101 150,101 180,102" stroke="#c8b888" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <!-- Plants sticking out of crate -->
+    <!-- Lettuce head (left) -->
+    <path d="M102,94 C96,88 90,78 92,68 C94,62 100,58 106,60 C100,64 96,72 98,80 C100,86 102,92 102,94Z" fill="#7bc462" stroke="#5a8a4a" stroke-width="1" stroke-linecap="round"/>
+    <path d="M118,94 C122,86 126,76 122,66 C120,60 114,58 110,60 C116,64 120,72 118,80 C116,86 118,92 118,94Z" fill="#82c86e" stroke="#5a8a4a" stroke-width="1" stroke-linecap="round"/>
+    <path d="M110,92 C108,86 106,76 108,68 C110,64 112,62 114,64 C116,68 114,76 112,82 C110,86 110,90 110,92Z" fill="#98d88a" stroke="#6aa85a" stroke-width="0.8" stroke-linecap="round"/>
+    <!-- Basil leaves (center-left) -->
+    <path d="M136,94 C132,90 126,82 124,74 C122,68 126,66 130,68 C134,70 136,78 136,86 C136,90 136,92 136,94Z" fill="#3d8035" stroke="#2e6628" stroke-width="1" stroke-linecap="round"/>
+    <path d="M140,94 C144,88 148,78 148,70 C148,64 144,62 140,64 C138,68 138,76 140,84 C140,88 140,92 140,94Z" fill="#458c3a" stroke="#2e6628" stroke-width="1" stroke-linecap="round"/>
+    <!-- Arugula leaf (center) -->
+    <path d="M156,94 C154,84 152,70 150,56 C148,50 150,46 154,48 C156,52 156,60 154,68 C152,62 150,62 152,66 C156,68 158,64 158,60 C160,66 158,76 156,86 C156,90 156,92 156,94Z" fill="#4e9842" stroke="#3c7a30" stroke-width="0.9" stroke-linecap="round"/>
+    <!-- Chive stalks (right) -->
+    <path d="M178,94 C178,82 176,66 178,50 C180,40 180,32 182,26" stroke="#4a8c3f" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M188,94 C190,84 188,70 190,56 C192,46 192,38 194,32" stroke="#509540" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M196,94 C196,86 194,74 196,62 C198,52 198,44 200,38" stroke="#448838" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <!-- Small chive flower bud -->
+    <path d="M182,26 C180,22 178,18 180,14 C182,12 184,12 186,14 C188,12 188,16 186,20 C184,24 182,26 182,26Z" fill="#b480c4" stroke="#8a5e98" stroke-width="0.8" stroke-linecap="round" opacity="0.8"/>
+    <!-- Parsley sprig (far right in box) -->
+    <path d="M210,96 C212,90 216,82 218,76 C220,72 218,70 214,72 C212,74 212,80 212,86 C212,90 210,94 210,96Z" fill="#509642" stroke="#38702e" stroke-width="0.8" stroke-linecap="round" opacity="0.75"/>
+    <!-- Calendar/weekly icon - small hand-drawn calendar -->
+    <path d="M196,120 C196,116 200,114 208,114 C216,114 220,116 220,120 L220,138 C220,140 216,142 208,142 C200,142 196,140 196,138Z" fill="#f5f0e0" stroke="#8a7a55" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M196,124 L220,124" stroke="#8a7a55" stroke-width="1" stroke-linecap="round"/>
+    <!-- Calendar dots for days -->
+    <circle cx="202" cy="129" r="1.2" fill="#8a7a55" opacity="0.6"/>
+    <circle cx="208" cy="129" r="1.2" fill="#8a7a55" opacity="0.6"/>
+    <circle cx="214" cy="129" r="1.2" fill="#8a7a55" opacity="0.6"/>
+    <circle cx="202" cy="135" r="1.2" fill="#8a7a55" opacity="0.6"/>
+    <circle cx="208" cy="135" r="1.2" fill="#8a7a55" opacity="0.6"/>
+    <circle cx="214" cy="135" r="1.2" fill="#8a7a55" opacity="0.6"/>
+    <!-- Calendar header tabs -->
+    <path d="M203,114 L203,110" stroke="#8a7a55" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M213,114 L213,110" stroke="#8a7a55" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+</svg>

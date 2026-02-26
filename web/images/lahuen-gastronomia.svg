@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <rect width="600" height="400" rx="24" fill="#f5f2eb"/>
+
+  <!-- Chef hat -->
+  <g transform="translate(300, 120)">
+    <ellipse cx="0" cy="0" rx="50" ry="30" fill="#fff" stroke="#d4c5a0" stroke-width="2"/>
+    <ellipse cx="-25" cy="-20" rx="22" ry="22" fill="#fff" stroke="#d4c5a0" stroke-width="1.5"/>
+    <ellipse cx="0" cy="-28" rx="22" ry="22" fill="#fff" stroke="#d4c5a0" stroke-width="1.5"/>
+    <ellipse cx="25" cy="-20" rx="22" ry="22" fill="#fff" stroke="#d4c5a0" stroke-width="1.5"/>
+    <rect x="-50" y="0" width="100" height="20" rx="4" fill="#fff" stroke="#d4c5a0" stroke-width="2"/>
+  </g>
+
+  <!-- Plate -->
+  <ellipse cx="300" cy="260" rx="120" ry="30" fill="#e8e4dc" stroke="#d4c5a0" stroke-width="2"/>
+  <ellipse cx="300" cy="256" rx="95" ry="22" fill="#fff"/>
+
+  <!-- Lettuce leaves on plate -->
+  <ellipse cx="275" cy="245" rx="28" ry="16" fill="#7bc462" transform="rotate(-15, 275, 245)"/>
+  <ellipse cx="280" cy="240" rx="20" ry="12" fill="#9ddf84" transform="rotate(-10, 280, 240)"/>
+  <ellipse cx="320" cy="248" rx="24" ry="14" fill="#4a8c3f" transform="rotate(10, 320, 248)"/>
+
+  <!-- Basil sprig -->
+  <line x1="305" y1="250" x2="305" y2="225" stroke="#3a6b35" stroke-width="1.5"/>
+  <ellipse cx="298" cy="228" rx="8" ry="6" fill="#4a9040" transform="rotate(-20, 298, 228)"/>
+  <ellipse cx="312" cy="230" rx="8" ry="6" fill="#55a348" transform="rotate(15, 312, 230)"/>
+  <ellipse cx="305" cy="222" rx="7" ry="5" fill="#4a9040"/>
+
+  <!-- Fork and knife -->
+  <g transform="translate(160, 200)">
+    <rect x="0" y="20" width="4" height="80" rx="2" fill="#b5a06a"/>
+    <rect x="-3" y="0" width="3" height="30" rx="1" fill="#b5a06a"/>
+    <rect x="1" y="0" width="3" height="30" rx="1" fill="#b5a06a"/>
+    <rect x="5" y="0" width="3" height="30" rx="1" fill="#b5a06a"/>
+  </g>
+  <g transform="translate(430, 200)">
+    <rect x="0" y="20" width="4" height="80" rx="2" fill="#b5a06a"/>
+    <path d="M-2,0 C-2,0 -4,12 2,20 C8,12 6,0 6,0Z" fill="#b5a06a"/>
+  </g>
+
+  <!-- Arrow from greenhouse to plate -->
+  <g transform="translate(300, 320)">
+    <text x="0" y="0" font-family="'Outfit',sans-serif" font-size="14" fill="#8a7a55" text-anchor="middle" font-weight="600">Del invernadero a tu cocina</text>
+    <text x="0" y="24" font-family="'Outfit',sans-serif" font-size="12" fill="#4a8c3f" text-anchor="middle" font-weight="700">Provisión gastronómica</text>
+  </g>
+
+  <!-- Small greenhouse icon -->
+  <g transform="translate(80, 250)">
+    <rect x="0" y="10" width="50" height="30" rx="2" fill="none" stroke="#4a8c3f" stroke-width="1.5"/>
+    <path d="M0,10 L25,-8 L50,10" fill="none" stroke="#4a8c3f" stroke-width="1.5"/>
+    <line x1="25" y1="-8" x2="25" y2="40" stroke="#4a8c3f" stroke-width="1" opacity="0.5"/>
+    <line x1="0" y1="25" x2="50" y2="25" stroke="#4a8c3f" stroke-width="1" opacity="0.5"/>
+    <!-- Small plants inside -->
+    <circle cx="15" cy="32" r="5" fill="#7bc462" opacity="0.6"/>
+    <circle cx="35" cy="32" r="5" fill="#9ddf84" opacity="0.6"/>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M140,265 C170,265 175,260 200,260" stroke="#4a8c3f" stroke-width="2" fill="none" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6Z" fill="#4a8c3f"/>
+    </marker>
+  </defs>
+</svg>

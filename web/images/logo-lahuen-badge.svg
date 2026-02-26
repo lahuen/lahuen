@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="1000" height="1000">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Outer circle - tan/brown border -->
+  <circle cx="250" cy="250" r="245" fill="#b5a06a" stroke="none"/>
+
+  <!-- Inner circle - warm beige background -->
+  <circle cx="250" cy="250" r="225" fill="#d4c5a0" stroke="none"/>
+
+  <!-- Inner subtle ring -->
+  <circle cx="250" cy="250" r="218" fill="none" stroke="#c4b590" stroke-width="1.5"/>
+
+  <!-- "Lahuen" text -->
+  <text x="250" y="240" font-family="'Alkatra', cursive, serif" font-weight="700" font-size="88"
+        fill="#3a6b35" text-anchor="middle" letter-spacing="2">Lahuen</text>
+
+  <!-- Teardrop leaves sprouting from the "h" -->
+  <g transform="translate(236, 180)">
+    <!-- Left leaf - teardrop -->
+    <path d="M0,4 C-5,-8 -14,-22 -22,-36 C-25,-42 -30,-44 -32,-40 C-34,-32 -28,-14 -18,-2 C-12,2 -5,4 0,4Z" fill="#4a8c3f"/>
+    <path d="M-2,1 C-8,-10 -16,-24 -24,-38" stroke="#3a6b35" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+
+    <!-- Right leaf - teardrop -->
+    <path d="M0,4 C5,-8 14,-22 22,-36 C25,-42 30,-44 32,-40 C34,-32 28,-14 18,-2 C12,2 5,4 0,4Z" fill="#5aa84a"/>
+    <path d="M2,1 C8,-10 16,-24 24,-38" stroke="#3a6b35" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+
+    <!-- Center sprout -->
+    <path d="M0,4 C-0.8,-6 -0.4,-16 0,-26 C0.4,-16 0.8,-6 0,4Z" fill="#5aa84a" opacity="0.55"/>
+  </g>
+
+  <!-- "Hidroponía Viva" subtitle -->
+  <text x="250" y="308" font-family="'Alkatra', cursive, serif" font-weight="400" font-size="36"
+        fill="#5a7a50" text-anchor="middle" letter-spacing="1.5" font-style="italic">Hidroponía Viva</text>
+
+  <!-- Bottom decorative band -->
+  <path d="M75,365 Q250,355 425,365 Q435,378 425,390 Q250,400 75,390 Q65,378 75,365Z" fill="#b5a06a" opacity="0.35"/>
+
+  <!-- Bottom text -->
+  <text x="250" y="383" font-family="'Outfit', 'Helvetica Neue', sans-serif" font-weight="400" font-size="17"
+        fill="#5a5040" text-anchor="middle" letter-spacing="2.5">Lechuga Hidropónica · Sin Agroquímicos</text>
+</svg>

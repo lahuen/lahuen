@@ -1,7 +1,7 @@
 ---
 name: Walter
-position: Agriculturist
+position: Agricultor
 image_path: /images/staff/walter.jpg
 link: "#"
-blurb: Agricultor y Grower de cannabis medicinal con conocimientos en biodinamica y permacultura.
+blurb: Agricultor con conocimientos en biodinámica, permacultura y sistemas de cultivo hidropónico.
 ---

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <defs>
+    <filter id="sketchy-m">
+      <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="3" result="noise" seed="2"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#sketchy-m)">
+    <!-- Outer leaves - soft butterhead rosette -->
+    <path d="M108,112 C104,98 99,78 112,62 C118,54 132,48 144,52 C138,58 126,72 122,86 C118,98 114,108 108,112Z" fill="#8cc67a" stroke="#5a8a4a" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+    <path d="M192,112 C196,97 201,78 188,62 C182,53 168,47 156,52 C162,59 174,72 178,87 C182,99 186,108 192,112Z" fill="#82c06e" stroke="#5a8a4a" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+    <path d="M98,118 C92,106 88,88 96,70 C101,60 114,52 128,55 C120,63 110,78 106,92 C102,104 100,114 98,118Z" fill="#7ab868" stroke="#4f7e42" stroke-width="1.1" stroke-linecap="round" opacity="0.8"/>
+    <path d="M202,118 C208,105 212,88 204,70 C199,59 186,52 172,55 C180,64 190,78 194,93 C198,105 200,114 202,118Z" fill="#74b462" stroke="#4f7e42" stroke-width="1.1" stroke-linecap="round" opacity="0.8"/>
+    <!-- Middle layer leaves -->
+    <path d="M116,108 C114,96 112,80 122,66 C128,58 140,55 150,58 C142,64 132,76 128,88 C124,98 120,106 116,108Z" fill="#9ad48a" stroke="#6a9e5a" stroke-width="1" stroke-linecap="round"/>
+    <path d="M184,108 C186,95 188,80 178,66 C172,57 160,54 150,58 C158,65 168,76 172,89 C176,99 180,106 184,108Z" fill="#96d286" stroke="#6a9e5a" stroke-width="1" stroke-linecap="round"/>
+    <path d="M124,106 C122,94 124,78 134,68 C140,62 148,60 150,62 C144,66 136,76 132,88 C130,96 126,104 124,106Z" fill="#a8dea0" stroke="#78aa68" stroke-width="0.9" stroke-linecap="round"/>
+    <path d="M176,106 C178,93 176,78 166,68 C160,61 152,60 150,62 C156,67 164,76 168,89 C170,97 174,104 176,106Z" fill="#a4dc9a" stroke="#78aa68" stroke-width="0.9" stroke-linecap="round"/>
+    <!-- Inner heart - pale butter yellow-green -->
+    <path d="M134,98 C132,88 136,74 146,68 C150,66 154,66 156,68 C164,74 168,88 166,98 C162,104 156,108 150,108 C144,108 138,104 134,98Z" fill="#c4eeba" stroke="#8aba7a" stroke-width="0.8" stroke-linecap="round"/>
+    <path d="M140,94 C139,86 142,76 148,72 C150,71 152,71 154,72 C158,76 161,86 160,94 C158,98 155,100 150,100 C145,100 142,98 140,94Z" fill="#daf5d0" stroke="#a0cc90" stroke-width="0.7" stroke-linecap="round"/>
+    <!-- Subtle vein lines -->
+    <path d="M128,90 C134,78 142,68 150,62" stroke="#6a9e5a" stroke-width="0.5" fill="none" stroke-linecap="round" opacity="0.3"/>
+    <path d="M172,90 C166,78 158,68 150,62" stroke="#6a9e5a" stroke-width="0.5" fill="none" stroke-linecap="round" opacity="0.3"/>
+  </g>
+</svg>

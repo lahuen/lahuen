@@ -1,8 +1,8 @@
 .bottom-cta {
-  /* Transición suave: de celeste hacia el azul claro del footer */
+  /* Transición suave: de verde hacia el verde profundo del footer */
   background: linear-gradient(to bottom,
       $brand-color 0%,
-      #4a7c9d 100%);
+      $dark-green 100%);
   color: #fff;
   text-align: center;
   margin: 0;
@@ -42,12 +42,13 @@
 .hero {
   color: #ffffff;
   text-align: center;
-  /* El degrade real entre celeste y tierra */
-  background: linear-gradient(135deg,
+  /* Degradé de verde suave con transición al contenido */
+  background: linear-gradient(180deg,
       $brand-color 0%,
-      $secondary-brand-color 100%);
-  /* Padding extra arriba para compensar el header absoluto */
-  padding: 180px 0 120px 0;
+      darken($brand-color, 6%) 60%,
+      lighten($brand-color, 20%) 100%);
+  /* Padding reducido para menos área verde */
+  padding: 150px 0 80px 0;
 
   h1 {
     color: #fff;
@@ -60,7 +61,6 @@
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0.95;
     opacity: 0.95;
     line-height: 1.5;
   }
@@ -103,8 +103,7 @@
     height: 400px;
     width: 100%;
     object-fit: cover;
-    border-radius: 24px;
-    /* Soft modern corners */
+    border-radius: $radius-xl;
     border: none;
 
     /* Premium layered shadow for depth without "dirty" borders */
@@ -129,7 +128,7 @@
   max-height: 520px;
   width: 100%;
   object-fit: cover;
-  border-radius: 28px;
+  border-radius: $radius-xl;
   border: none;
 
   /* Deeper shadow for the hero image to make it "pop" */

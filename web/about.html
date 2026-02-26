@@ -1,18 +1,80 @@
 ---
-title: Nuestro equipo
+title: Nosotros
 description: >-
-Somos un equipo multidisciplinario de trabajadores, técnicos y vecinos de Moreno unidos por la convicción de que la
-hidroponía y el cooperativismo son motores de soberanía alimentaria y desarrollo local.
+  Lahuen es una cooperativa de producción hidropónica en Moreno. Cultivamos hojas verdes,
+  aromáticas y flores comestibles sin agroquímicos. Conocé nuestra historia y equipo.
 ---
 
-<ul class="staff">
-	{% for person in site.staff_members %}
-	<li>
-		<div class="square-image"><img src="{% include relative-src.html src=person.image_path %}"
-				alt="{{ person.name }}" /></div>
-		<div class="name"><a target="_blank" href="{{ person.link }}">{{ person.name }}</a></div>
-		<div class="position">{{ person.position }}</div>
-		<div class="about">{{ person.blurb }}</div>
-	</li>
-	{% endfor %}
-</ul>
+<div class="content">
+  <section>
+    <div class="container">
+      <div class="text editable">
+        <h2>Lahuen: el remedio que crece</h2>
+        <p>
+          <strong>Lahuen</strong> viene del mapudungun — la lengua del pueblo mapuche — y significa
+          <em>remedio</em>, <em>hierba medicinal</em>, la energía sanadora que vive dentro de las plantas.
+          Elegimos ese nombre porque creemos que el buen alimento es la forma más directa
+          de cuidar la salud, y que producirlo con respeto por la naturaleza no es un lujo
+          sino una responsabilidad.
+        </p>
+        <p>
+          Somos una cooperativa de trabajo en Moreno, provincia de Buenos Aires.
+          Nacimos con una convicción simple: producir alimentos frescos, limpios y accesibles
+          para nuestra comunidad usando cultivo hidropónico. Hoy producimos hojas verdes,
+          aromáticas y flores comestibles, y abastecemos tanto a familias como al rubro gastronómico.
+        </p>
+        <p>
+          Trabajamos en el Parque Agroecológico IMDEL, en Cuartel V, donde operamos nuestro
+          invernadero. Cada integrante de la cooperativa participa en todo el proceso:
+          siembra, cuidado, cosecha y entrega. No hay intermediarios entre lo que cultivamos
+          y lo que llega a tu mesa.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 style="text-align: center;">Lo que nos mueve</h2>
+      <ul class="values-grid">
+        <li>
+          <h3>Trabajo cooperativo</h3>
+          <p>Organización horizontal donde cada integrante tiene voz, participación y una parte justa del resultado.</p>
+        </li>
+        <li>
+          <h3>Respeto por la naturaleza</h3>
+          <p>Cultivamos en agua con nutrientes controlados. Sin pesticidas, sin herbicidas, sin dañar el suelo.</p>
+        </li>
+        <li>
+          <h3>Raíz local</h3>
+          <p>Producimos en Moreno para nuestra comunidad y la zona. Generamos empleo donde hacen falta oportunidades.</p>
+        </li>
+        <li>
+          <h3>Alimento como derecho</h3>
+          <p>Trabajamos para que comer fresco y sano no sea un privilegio. La soberanía alimentaria empieza en el barrio.</p>
+        </li>
+        <li>
+          <h3>Apertura y crecimiento</h3>
+          <p>Buscamos nuevos mercados, alianzas y formas de llevar lo que producimos a más mesas, más cocinas, más comunidades.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Nuestro equipo</h2>
+      <ul class="staff">
+        {% for person in site.staff_members %}
+        <li>
+          <div class="square-image"><img src="{% include relative-src.html src=person.image_path %}"
+              alt="{{ person.name }}" /></div>
+          <div class="name">{{ person.name }}</div>
+          <div class="position">{{ person.position }}</div>
+          <div class="about">{{ person.blurb }}</div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</div>

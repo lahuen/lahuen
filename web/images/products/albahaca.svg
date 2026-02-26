@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <defs>
+    <filter id="sketchy-a">
+      <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="3" result="noise" seed="20"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#sketchy-a)">
+    <!-- Main stem - hand-drawn wobbly line -->
+    <path d="M150,172 C149,164 151,154 150,144 C149,134 151,124 150,114 C149,104 151,94 150,84 C149,74 150,68 150,62" stroke="#3a6b35" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- Bottom leaf pair - largest -->
+    <path d="M150,140 C144,138 132,132 120,122 C112,116 108,108 112,102 C116,96 124,96 132,100 C140,104 146,112 148,120 C148,128 150,136 150,140Z" fill="#3d8035" stroke="#2e6628" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M150,140 C156,138 168,132 180,122 C188,116 192,108 188,102 C184,96 176,96 168,100 C160,104 154,112 152,120 C152,128 150,136 150,140Z" fill="#438a3a" stroke="#2e6628" stroke-width="1.2" stroke-linecap="round"/>
+    <!-- Leaf veins - bottom pair -->
+    <path d="M150,138 C142,132 128,120 118,108" stroke="#2e6628" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.35"/>
+    <path d="M150,138 C158,132 172,120 182,108" stroke="#2e6628" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.35"/>
+    <!-- Middle leaf pair -->
+    <path d="M150,114 C145,112 136,106 126,98 C120,92 118,86 122,82 C126,78 132,78 138,82 C144,86 148,94 149,102 C149,108 150,112 150,114Z" fill="#4a9440" stroke="#357030" stroke-width="1.1" stroke-linecap="round"/>
+    <path d="M150,114 C155,112 164,106 174,98 C180,92 182,86 178,82 C174,78 168,78 162,82 C156,86 152,94 151,102 C151,108 150,112 150,114Z" fill="#509a46" stroke="#357030" stroke-width="1.1" stroke-linecap="round"/>
+    <!-- Leaf veins - middle pair -->
+    <path d="M150,112 C144,106 134,96 126,88" stroke="#357030" stroke-width="0.5" fill="none" stroke-linecap="round" opacity="0.3"/>
+    <path d="M150,112 C156,106 166,96 174,88" stroke="#357030" stroke-width="0.5" fill="none" stroke-linecap="round" opacity="0.3"/>
+    <!-- Top leaf pair - smallest -->
+    <path d="M150,88 C146,86 140,82 134,76 C130,72 128,68 130,64 C132,60 136,60 140,62 C144,64 148,70 149,76 C149,82 150,86 150,88Z" fill="#58a64c" stroke="#408234" stroke-width="1" stroke-linecap="round"/>
+    <path d="M150,88 C154,86 160,82 166,76 C170,72 172,68 170,64 C168,60 164,60 160,62 C156,64 152,70 151,76 C151,82 150,86 150,88Z" fill="#5eac52" stroke="#408234" stroke-width="1" stroke-linecap="round"/>
+    <!-- Tiny top bud -->
+    <path d="M148,66 C146,62 148,58 150,56 C152,58 154,62 152,66 C151,67 149,67 148,66Z" fill="#68b85a" stroke="#4a9440" stroke-width="0.7" stroke-linecap="round"/>
+    <!-- Small branch stems -->
+    <path d="M150,140 C146,138 142,136" stroke="#3a6b35" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M150,140 C154,138 158,136" stroke="#3a6b35" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M150,114 C147,112 144,110" stroke="#3a6b35" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M150,114 C153,112 156,110" stroke="#3a6b35" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+  </g>
+</svg>
