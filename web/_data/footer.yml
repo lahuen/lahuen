@@ -7,6 +7,9 @@
     link: /about/
   - name: Contacto
     link: /contact/
+  - name: Vendedores
+    link: https://crm.lahuen.ar
+    new_window: true
 - links:
 - links:
   - name: Instagram
