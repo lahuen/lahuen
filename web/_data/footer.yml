@@ -5,12 +5,12 @@
     link: /como-funciona/
   - name: Nosotros
     link: /about/
+- links:
   - name: Contacto
     link: /contact/
   - name: Vendedores
     link: https://crm.lahuen.ar
     new_window: true
-- links:
 - links:
   - name: Instagram
     link: https://www.instagram.com/lahuen.ar

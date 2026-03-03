@@ -23,7 +23,7 @@
 			}
 
 			svg {
-				fill: #999;
+				fill: $secondary-brand-color;
 				margin-right: 10px;
 				transition: fill 0.2s ease;
 				vertical-align: middle;
@@ -61,12 +61,12 @@ footer {
 	font-size: 1.1em;
 	position: relative;
 	background: $dark-green;
-	color: #fff;
+	color: $secondary-brand-color;
 
 	.copyright {
 		font-size: .85em;
 		margin: 40px auto 0 auto;
-		opacity: 0.9;
+		color: darken($secondary-brand-color, 10%);
 
 		@media #{$tablet} {
 			text-align: center;
@@ -76,7 +76,7 @@ footer {
 
 	&,
 	a {
-		color: rgba(255, 255, 255, 0.9);
+		color: $secondary-brand-color;
 	}
 
 	h2 {
@@ -97,7 +97,7 @@ footer {
 		transition: all 0.3s ease;
 
 		&:hover {
-			color: #fff;
+			color: lighten($secondary-brand-color, 15%);
 			transform: translateX(3px);
 		}
 	}
