@@ -3,6 +3,10 @@
 #  new_window: false
 #  highlight: false
 
+- name: Home
+  link: /
+  new_window: false
+  highlight: false
 - name: Productos
   link: /products/
   new_window: false
