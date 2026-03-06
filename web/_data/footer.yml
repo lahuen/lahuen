@@ -1,23 +1,22 @@
 - links:
-  - name: Productos
-    link: /products/
-  - name: Cómo funciona
-    link: /como-funciona/
-  - name: Nosotros
-    link: /about/
+    - name: Productos
+      link: /products/
+    - name: Cómo funciona
+      link: /como-funciona/
+    - name: Nosotros
+      link: /about/
 - links:
-  - name: Contacto
-    link: /contact/
-  - name: Vendedores
-    link: https://crm.lahuen.ar
-    new_window: true
+    - name: Contacto
+      link: /contact/
+    - name: APP
+      link: https://app.lahuen.ar
+      new_window: true
 - links:
-  - name: Instagram
-    link: https://www.instagram.com/lahuen.ar
-    new_window: true
-    social_icon: Instagram
-  - name: LinkedIn
-    link: https://www.linkedin.com/company/lahuen-coop/
-    new_window: true
-    social_icon: LinkedIn
-
+    - name: Instagram
+      link: https://www.instagram.com/lahuen.ar
+      new_window: true
+      social_icon: Instagram
+    - name: LinkedIn
+      link: https://www.linkedin.com/company/lahuen-coop/
+      new_window: true
+      social_icon: LinkedIn
